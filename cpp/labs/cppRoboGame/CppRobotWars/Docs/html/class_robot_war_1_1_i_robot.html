@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>RobotWar: Класс RobotWar::IRobot</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.5.7.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&nbsp;имен</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="classes.html"><span>Алфавитный&nbsp;указатель&nbsp;классов</span></a></li>
+      <li><a href="hierarchy.html"><span>Иерархия&nbsp;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&nbsp;классов</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespace_robot_war.html">RobotWar</a>::<a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a>
+  </div>
+</div>
+<div class="contents">
+<h1>Класс RobotWar::IRobot</h1><!-- doxytag: class="RobotWar::IRobot" -->Интерфейс <a class="el" href="class_robot_war_1_1_i_robot.html" title="Интерфейс IRobot реализуется классом пользователя...">IRobot</a> реализуется классом пользователя, который должен быть расположен во внешней динамической библиотекой, загружаемой по требованию пользователя.  
+<a href="#_details">Подробнее...</a>
+<p>
+<code>#include &lt;IRobot.h&gt;</code>
+<p>
+
+<p>
+<a href="class_robot_war_1_1_i_robot-members.html">Полный список членов класса</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Открытые члены</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_i_robot.html#88fd05feb39505b7fdbbf8b0f3fb9fcd">getName</a> (void)=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Получение имени робота. Возвращает имя робота, определенное пользователем.  <a href="#88fd05feb39505b7fdbbf8b0f3fb9fcd"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_i_robot.html#9833add5b69871831a10ef992e41c6ef">ReceiveMessage</a> (char *RobotName, void *TalkData)=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Прием сообщеия. Вызывается ядром программы, когда другой робот посылает сообщение роботу, реализующему данный метод интерфейса.  <a href="#9833add5b69871831a10ef992e41c6ef"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_i_robot.html#5aa7967c5604773e28db31f167b7bf46">Execute</a> (<a class="el" href="class_robot_war_1_1_i_robot_operation.html">IRobotOperation</a> *Engine)=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Метод выполнения потока робота. Этот метод вызывается при создании для робота отдельного потока.  <a href="#5aa7967c5604773e28db31f167b7bf46"></a><br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>Подробное описание</h2>
+Интерфейс <a class="el" href="class_robot_war_1_1_i_robot.html" title="Интерфейс IRobot реализуется классом пользователя...">IRobot</a> реализуется классом пользователя, который должен быть расположен во внешней динамической библиотекой, загружаемой по требованию пользователя. <hr><h2>Методы</h2>
+<a class="anchor" name="5aa7967c5604773e28db31f167b7bf46"></a><!-- doxytag: member="RobotWar::IRobot::Execute" ref="5aa7967c5604773e28db31f167b7bf46" args="(IRobotOperation *Engine)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RobotWar::IRobot::Execute           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_robot_war_1_1_i_robot_operation.html">IRobotOperation</a> *&nbsp;</td>
+          <td class="paramname"> <em>Engine</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Метод выполнения потока робота. Этот метод вызывается при создании для робота отдельного потока. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="88fd05feb39505b7fdbbf8b0f3fb9fcd"></a><!-- doxytag: member="RobotWar::IRobot::getName" ref="88fd05feb39505b7fdbbf8b0f3fb9fcd" args="(void)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual char* RobotWar::IRobot::getName           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Получение имени робота. Возвращает имя робота, определенное пользователем. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="9833add5b69871831a10ef992e41c6ef"></a><!-- doxytag: member="RobotWar::IRobot::ReceiveMessage" ref="9833add5b69871831a10ef992e41c6ef" args="(char *RobotName, void *TalkData)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RobotWar::IRobot::ReceiveMessage           </td>
+          <td>(</td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>RobotName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>TalkData</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Прием сообщеия. Вызывается ядром программы, когда другой робот посылает сообщение роботу, реализующему данный метод интерфейса. 
+<p>
+
+</div>
+</div><p>
+<hr>Объявления и описания членов класса находятся в файле:<ul>
+<li><a class="el" href="_i_robot_8h.html">IRobot.h</a></ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Документация по RobotWar. Последние изменения: Mon Jan 12 00:07:12 2009. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
+</body>
+</html>

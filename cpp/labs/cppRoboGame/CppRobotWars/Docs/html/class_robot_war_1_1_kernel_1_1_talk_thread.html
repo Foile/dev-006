@@ -1,0 +1,229 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>RobotWar: Класс RobotWar::Kernel::TalkThread</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.5.7.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&nbsp;имен</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="classes.html"><span>Алфавитный&nbsp;указатель&nbsp;классов</span></a></li>
+      <li><a href="hierarchy.html"><span>Иерархия&nbsp;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&nbsp;классов</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespace_robot_war.html">RobotWar</a>::<a class="el" href="namespace_robot_war_1_1_kernel.html">Kernel</a>::<a class="el" href="class_robot_war_1_1_kernel_1_1_talk_thread.html">TalkThread</a>
+  </div>
+</div>
+<div class="contents">
+<h1>Класс RobotWar::Kernel::TalkThread</h1><!-- doxytag: class="RobotWar::Kernel::TalkThread" --><!-- doxytag: inherits="RobotWar::Infrastructure::Thread" -->Класс потока для асинхронного метода <a class="el" href="class_robot_war_1_1_i_robot_operation.html#2e45bc34839aa1d241eb5996306b9442">IRobotOperation::SendMsg()</a>.  
+<a href="#_details">Подробнее...</a>
+<p>
+<code>#include &lt;TalkThread.h&gt;</code>
+<p>
+<div class="dynheader">
+Граф наследования:RobotWar::Kernel::TalkThread:</div>
+<div class="dynsection">
+
+<p><center><img src="class_robot_war_1_1_kernel_1_1_talk_thread.png" usemap="#RobotWar::Kernel::TalkThread_map" border="0" alt=""></center>
+<map name="RobotWar::Kernel::TalkThread_map">
+<area href="class_robot_war_1_1_infrastructure_1_1_thread.html" alt="RobotWar::Infrastructure::Thread" shape="rect" coords="0,0,195,24">
+</map>
+</div>
+
+<p>
+<a href="class_robot_war_1_1_kernel_1_1_talk_thread-members.html">Полный список членов класса</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Открытые члены</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_talk_thread.html#6a2dc59edbe8f9601b4bda8549e65afb">TalkThread</a> (void)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_talk_thread.html#62c95857ea482541852abdcaa827fed3">~TalkThread</a> (void)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_talk_thread.html#be2fd555dae678b0a68cfd6545f8f3a5">TalkThread</a> (<a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *robot, char *RobotName, void *TalkData)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_talk_thread.html#dd9a8be8b24e4640ff6085d2e47250dc">Execute</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">метод выполнения потока.  <a href="#dd9a8be8b24e4640ff6085d2e47250dc"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Закрытые данные</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_talk_thread.html#fadae874202961647b8b92a623a6522f">m_SenderName</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">имя робота, который отправляет сообщение.  <a href="#fadae874202961647b8b92a623a6522f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_talk_thread.html#db80ece969d29c47d31eb24ae0dbe867">m_TalkData</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">данные, которые передаются другому роботу.  <a href="#db80ece969d29c47d31eb24ae0dbe867"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_talk_thread.html#a32a24494bd633ec51797e6ab1921c58">m_ReceiverRobot</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Робот, который должен принять сообщение.  <a href="#a32a24494bd633ec51797e6ab1921c58"></a><br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>Подробное описание</h2>
+Класс потока для асинхронного метода <a class="el" href="class_robot_war_1_1_i_robot_operation.html#2e45bc34839aa1d241eb5996306b9442">IRobotOperation::SendMsg()</a>. <hr><h2>Конструктор(ы)</h2>
+<a class="anchor" name="6a2dc59edbe8f9601b4bda8549e65afb"></a><!-- doxytag: member="RobotWar::Kernel::TalkThread::TalkThread" ref="6a2dc59edbe8f9601b4bda8549e65afb" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TalkThread::TalkThread           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="62c95857ea482541852abdcaa827fed3"></a><!-- doxytag: member="RobotWar::Kernel::TalkThread::~TalkThread" ref="62c95857ea482541852abdcaa827fed3" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TalkThread::~TalkThread           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="be2fd555dae678b0a68cfd6545f8f3a5"></a><!-- doxytag: member="RobotWar::Kernel::TalkThread::TalkThread" ref="be2fd555dae678b0a68cfd6545f8f3a5" args="(IRobot *robot, char *RobotName, void *TalkData)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RobotWar::Kernel::TalkThread::TalkThread           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *&nbsp;</td>
+          <td class="paramname"> <em>robot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>RobotName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>TalkData</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<hr><h2>Методы</h2>
+<a class="anchor" name="dd9a8be8b24e4640ff6085d2e47250dc"></a><!-- doxytag: member="RobotWar::Kernel::TalkThread::Execute" ref="dd9a8be8b24e4640ff6085d2e47250dc" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotWar::Kernel::TalkThread::Execute           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+метод выполнения потока. 
+<p>
+
+<p>Замещает <a class="el" href="class_robot_war_1_1_infrastructure_1_1_thread.html#469536d44ab5ca813b9fe1b7857a6fbf">RobotWar::Infrastructure::Thread</a>.</p>
+
+</div>
+</div><p>
+<hr><h2>Данные класса</h2>
+<a class="anchor" name="a32a24494bd633ec51797e6ab1921c58"></a><!-- doxytag: member="RobotWar::Kernel::TalkThread::m_ReceiverRobot" ref="a32a24494bd633ec51797e6ab1921c58" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a>* <a class="el" href="class_robot_war_1_1_kernel_1_1_talk_thread.html#a32a24494bd633ec51797e6ab1921c58">RobotWar::Kernel::TalkThread::m_ReceiverRobot</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Робот, который должен принять сообщение. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="fadae874202961647b8b92a623a6522f"></a><!-- doxytag: member="RobotWar::Kernel::TalkThread::m_SenderName" ref="fadae874202961647b8b92a623a6522f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* <a class="el" href="class_robot_war_1_1_kernel_1_1_talk_thread.html#fadae874202961647b8b92a623a6522f">RobotWar::Kernel::TalkThread::m_SenderName</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+имя робота, который отправляет сообщение. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="db80ece969d29c47d31eb24ae0dbe867"></a><!-- doxytag: member="RobotWar::Kernel::TalkThread::m_TalkData" ref="db80ece969d29c47d31eb24ae0dbe867" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* <a class="el" href="class_robot_war_1_1_kernel_1_1_talk_thread.html#db80ece969d29c47d31eb24ae0dbe867">RobotWar::Kernel::TalkThread::m_TalkData</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+данные, которые передаются другому роботу. 
+<p>
+
+</div>
+</div><p>
+<hr>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="_talk_thread_8h.html">TalkThread.h</a><li><a class="el" href="_talk_thread_8cpp.html">TalkThread.cpp</a></ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Документация по RobotWar. Последние изменения: Mon Jan 12 00:07:12 2009. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
+</body>
+</html>

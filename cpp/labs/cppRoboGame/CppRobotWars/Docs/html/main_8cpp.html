@@ -1,0 +1,182 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>RobotWar: Файл main.cpp</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.5.7.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&nbsp;имен</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&nbsp;членов&nbsp;всех&nbsp;файлов</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Файл main.cpp</h1><code>#include &lt;windows.h&gt;</code><br>
+<code>#include &lt;vector&gt;</code><br>
+<code>#include &quot;<a class="el" href="resource_8h.html">resource.h</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="_open_file_dialog_8h.html">openfiledialog.h</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="_sample_view_8h.html">sampleview.h</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="_kernel_8h.html">kernel.h</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="_dll_helper_8h.html">dllhelper.h</a>&quot;</code><br>
+<code>#include &quot;<a class="el" href="_robot_internal_8h.html">robotinternal.h</a>&quot;</code><br>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Функции</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">LRESULT CALLBACK&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#f81ad1db349dbe5b2eda8496bddc46c7">HandleEvent</a> (HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int WINAPI&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#6be47ecdf51b4ce9660172fc6d367a5e">WinMain</a> (HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)</td></tr>
+
+<tr><td colspan="2"><br><h2>Переменные</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="class_sample_view.html">SampleView</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#de196ed1ca1f65b7616dcc6025dd8b2a">pView</a> = NULL</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html">RobotWar::Kernel::Kernel</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#f51a5a38aaa0226667462a247a1bccad">pKernel</a> = NULL</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">vector&lt; <a class="el" href="class_robot_war_1_1_i_robot_factory.html">IRobotFactory</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#2728df0a37609142f11c315827bc1ec3">DllStorage</a></td></tr>
+
+</table>
+<hr><h2>Функции</h2>
+<a class="anchor" name="f81ad1db349dbe5b2eda8496bddc46c7"></a><!-- doxytag: member="main.cpp::HandleEvent" ref="f81ad1db349dbe5b2eda8496bddc46c7" args="(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LRESULT CALLBACK HandleEvent           </td>
+          <td>(</td>
+          <td class="paramtype">HWND&nbsp;</td>
+          <td class="paramname"> <em>hWnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&nbsp;</td>
+          <td class="paramname"> <em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WPARAM&nbsp;</td>
+          <td class="paramname"> <em>wParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&nbsp;</td>
+          <td class="paramname"> <em>lParam</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="6be47ecdf51b4ce9660172fc6d367a5e"></a><!-- doxytag: member="main.cpp::WinMain" ref="6be47ecdf51b4ce9660172fc6d367a5e" args="(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int WINAPI WinMain           </td>
+          <td>(</td>
+          <td class="paramtype">HINSTANCE&nbsp;</td>
+          <td class="paramname"> <em>hInstance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HINSTANCE&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPSTR&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>nCmdShow</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<hr><h2>Переменные</h2>
+<a class="anchor" name="2728df0a37609142f11c315827bc1ec3"></a><!-- doxytag: member="main.cpp::DllStorage" ref="2728df0a37609142f11c315827bc1ec3" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_robot_war_1_1_i_robot_factory.html">IRobotFactory</a>*&gt; <a class="el" href="main_8cpp.html#2728df0a37609142f11c315827bc1ec3">DllStorage</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="f51a5a38aaa0226667462a247a1bccad"></a><!-- doxytag: member="main.cpp::pKernel" ref="f51a5a38aaa0226667462a247a1bccad" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html">RobotWar::Kernel::Kernel</a>* <a class="el" href="main_8cpp.html#f51a5a38aaa0226667462a247a1bccad">pKernel</a> = NULL          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="de196ed1ca1f65b7616dcc6025dd8b2a"></a><!-- doxytag: member="main.cpp::pView" ref="de196ed1ca1f65b7616dcc6025dd8b2a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_sample_view.html">SampleView</a>* <a class="el" href="main_8cpp.html#de196ed1ca1f65b7616dcc6025dd8b2a">pView</a> = NULL          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Документация по RobotWar. Последние изменения: Mon Jan 12 00:07:11 2009. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
+</body>
+</html>

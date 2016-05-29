@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>RobotWar: Класс RobotWar::IRobotOperation</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.5.7.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&nbsp;имен</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="classes.html"><span>Алфавитный&nbsp;указатель&nbsp;классов</span></a></li>
+      <li><a href="hierarchy.html"><span>Иерархия&nbsp;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&nbsp;классов</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespace_robot_war.html">RobotWar</a>::<a class="el" href="class_robot_war_1_1_i_robot_operation.html">IRobotOperation</a>
+  </div>
+</div>
+<div class="contents">
+<h1>Класс RobotWar::IRobotOperation</h1><!-- doxytag: class="RobotWar::IRobotOperation" -->Интерфейс ядра игровой программы.  
+<a href="#_details">Подробнее...</a>
+<p>
+<code>#include &lt;IRobotOperation.h&gt;</code>
+<p>
+<div class="dynheader">
+Граф наследования:RobotWar::IRobotOperation:</div>
+<div class="dynsection">
+
+<p><center><img src="class_robot_war_1_1_i_robot_operation.png" usemap="#RobotWar::IRobotOperation_map" border="0" alt=""></center>
+<map name="RobotWar::IRobotOperation_map">
+<area href="class_robot_war_1_1_kernel_1_1_kernel.html" alt="RobotWar::Kernel::Kernel" shape="rect" coords="0,56,164,80">
+</map>
+</div>
+
+<p>
+<a href="class_robot_war_1_1_i_robot_operation-members.html">Полный список членов класса</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Открытые члены</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_i_robot_operation.html#e0e67713964bdeea1c909ccf630a3b95">Move</a> (<a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *Sender, int x, int y)=0</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_i_robot_operation.html#43f020c5e0ccf78847326240d8a653f0">Fire</a> (<a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *Sender, int x, int y)=0</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_i_robot_operation.html#4690822b8b65948fc72ab617b283bed6">LookAround</a> (<a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *Sender, int depth, int CountPoints, <a class="el" href="struct_robot_war_1_1_p_t.html">PT</a> *pPoints)=0</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_i_robot_operation.html#2e45bc34839aa1d241eb5996306b9442">SendMsg</a> (<a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *Sender, char *RobotName, void *TalkData)=0</td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Подробное описание</h2>
+Интерфейс ядра игровой программы. <hr><h2>Методы</h2>
+<a class="anchor" name="43f020c5e0ccf78847326240d8a653f0"></a><!-- doxytag: member="RobotWar::IRobotOperation::Fire" ref="43f020c5e0ccf78847326240d8a653f0" args="(IRobot *Sender, int x, int y)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RobotWar::IRobotOperation::Fire           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *&nbsp;</td>
+          <td class="paramname"> <em>Sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>y</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Позволяет роботу произвести выстрел на указанное расстояние (не более 3) <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Sender</em>&nbsp;</td><td>- робот, который обращается к ядру. Следует указывать this </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>- координата по x (0&lt;=x&lt;3) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>- координата по y (0&lt;=y&lt;3) </td></tr>
+  </table>
+</dl>
+
+<p>Замещается в <a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#c99cd9bfb2514cbc0c26ad7b5a3a3cab">RobotWar::Kernel::Kernel</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="4690822b8b65948fc72ab617b283bed6"></a><!-- doxytag: member="RobotWar::IRobotOperation::LookAround" ref="4690822b8b65948fc72ab617b283bed6" args="(IRobot *Sender, int depth, int CountPoints, PT *pPoints)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RobotWar::IRobotOperation::LookAround           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *&nbsp;</td>
+          <td class="paramname"> <em>Sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>depth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>CountPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_robot_war_1_1_p_t.html">PT</a> *&nbsp;</td>
+          <td class="paramname"> <em>pPoints</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+позволяет роботу получить информацию о существование других роботов в радиусе depth <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Sender</em>&nbsp;</td><td>- робот, который обращается к ядру. Следует указывать this </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>depth</em>&nbsp;</td><td>- глубина просмотра (0&lt;=depth&lt;3) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>CountPoints</em>&nbsp;</td><td>- количество элементов в буфере для заполнения массива координат </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pPoints</em>&nbsp;</td><td>- массив структур <a class="el" href="struct_robot_war_1_1_p_t.html" title="Структура, хранящая координаты робота для метод...">PT</a> для заполнения координат, в которых есть объекты </td></tr>
+  </table>
+</dl>
+
+<p>Замещается в <a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#4944db9c2ad33c22d9521094be11d887">RobotWar::Kernel::Kernel</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="e0e67713964bdeea1c909ccf630a3b95"></a><!-- doxytag: member="RobotWar::IRobotOperation::Move" ref="e0e67713964bdeea1c909ccf630a3b95" args="(IRobot *Sender, int x, int y)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RobotWar::IRobotOperation::Move           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *&nbsp;</td>
+          <td class="paramname"> <em>Sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>y</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Перемещает робота на указанное количество координат (не более 3) <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Sender</em>&nbsp;</td><td>- робот, который обращается к ядру. Следует указывать this </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>- координата по x (0&lt;=x&lt;3) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>- координата по y (0&lt;=y&lt;3) </td></tr>
+  </table>
+</dl>
+
+<p>Замещается в <a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#4edd19769909e8e435f454ca37371d93">RobotWar::Kernel::Kernel</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="2e45bc34839aa1d241eb5996306b9442"></a><!-- doxytag: member="RobotWar::IRobotOperation::SendMsg" ref="2e45bc34839aa1d241eb5996306b9442" args="(IRobot *Sender, char *RobotName, void *TalkData)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RobotWar::IRobotOperation::SendMsg           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *&nbsp;</td>
+          <td class="paramname"> <em>Sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>RobotName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>TalkData</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+позволяет роботу отправить сообщение другому роботу <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Sender</em>&nbsp;</td><td>- робот, который обращается к ядру. Следует указывать this </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>RobotName</em>&nbsp;</td><td>- строка, содержащая имя робота, которому пересылается сообщение </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>TalkData</em>&nbsp;</td><td>- буфер, содержащий передаваемые другому роботу данные </td></tr>
+  </table>
+</dl>
+
+<p>Замещается в <a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#3f4ad46c810a40fd54df437321eb1404">RobotWar::Kernel::Kernel</a>.</p>
+
+</div>
+</div><p>
+<hr>Объявления и описания членов класса находятся в файле:<ul>
+<li><a class="el" href="_i_robot_operation_8h.html">IRobotOperation.h</a></ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Документация по RobotWar. Последние изменения: Mon Jan 12 00:07:12 2009. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>RobotWar: Класс OpenFileDialog</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.5.7.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&nbsp;имен</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="classes.html"><span>Алфавитный&nbsp;указатель&nbsp;классов</span></a></li>
+      <li><a href="hierarchy.html"><span>Иерархия&nbsp;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&nbsp;классов</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Класс OpenFileDialog</h1><!-- doxytag: class="OpenFileDialog" -->Инфраструктурный класс для инкапсуляции Win32API (диалог открытия файла).  
+<a href="#_details">Подробнее...</a>
+<p>
+<code>#include &lt;OpenFileDialog.h&gt;</code>
+<p>
+
+<p>
+<a href="class_open_file_dialog-members.html">Полный список членов класса</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Открытые члены</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_file_dialog.html#d9a9a77705d7857602c67a344230ed91">OpenFileDialog</a> (HWND owner)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_file_dialog.html#c5a91bfc72f0a2e593c624b670e641e1">getFileName</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">получить введенное пользователем имя файла и полный путь к нему.  <a href="#c5a91bfc72f0a2e593c624b670e641e1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_file_dialog.html#a94e3d4f20c2a6446dcdbc22b13da1b4">getOnlyFileName</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">получить введенное пользователем имя файла без пути.  <a href="#a94e3d4f20c2a6446dcdbc22b13da1b4"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_file_dialog.html#a6a6ba92044f6c694fbc35b71f84eb72">setFilter</a> (char *filter)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_file_dialog.html#ef9ad39ccc2f456ae482e7dbab2eac2b">show</a> ()</td></tr>
+
+<tr><td colspan="2"><br><h2>Закрытые данные</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">OPENFILENAME&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">структура, определяемая Win32API.  <a href="#e8436f2e2554ac1572e85bd6bf2098a1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_file_dialog.html#468b3965c639457bb31e753f48c7ac9a">_bufferForFileEditControl</a> [MAX_STRING_LENGTH]</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Внутренний буфер.  <a href="#468b3965c639457bb31e753f48c7ac9a"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_file_dialog.html#537a62d46947f9d93498476005ae1285">_bufferForFileName</a> [MAX_STRING_LENGTH]</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Буфер, содержащий имя файла.  <a href="#537a62d46947f9d93498476005ae1285"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_open_file_dialog.html#addd566abcd49aeff33fb92211b13358">_filter</a> [MAX_STRING_LENGTH]</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">буфер, содержащий фильтры имени файла.  <a href="#addd566abcd49aeff33fb92211b13358"></a><br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>Подробное описание</h2>
+Инфраструктурный класс для инкапсуляции Win32API (диалог открытия файла). <hr><h2>Конструктор(ы)</h2>
+<a class="anchor" name="d9a9a77705d7857602c67a344230ed91"></a><!-- doxytag: member="OpenFileDialog::OpenFileDialog" ref="d9a9a77705d7857602c67a344230ed91" args="(HWND owner)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">OpenFileDialog::OpenFileDialog           </td>
+          <td>(</td>
+          <td class="paramtype">HWND&nbsp;</td>
+          <td class="paramname"> <em>owner</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+конструктор <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>owner</em>&nbsp;</td><td>- дескриптор окна владельца </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<hr><h2>Методы</h2>
+<a class="anchor" name="c5a91bfc72f0a2e593c624b670e641e1"></a><!-- doxytag: member="OpenFileDialog::getFileName" ref="c5a91bfc72f0a2e593c624b670e641e1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * OpenFileDialog::getFileName           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+получить введенное пользователем имя файла и полный путь к нему. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="a94e3d4f20c2a6446dcdbc22b13da1b4"></a><!-- doxytag: member="OpenFileDialog::getOnlyFileName" ref="a94e3d4f20c2a6446dcdbc22b13da1b4" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * OpenFileDialog::getOnlyFileName           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+получить введенное пользователем имя файла без пути. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="a6a6ba92044f6c694fbc35b71f84eb72"></a><!-- doxytag: member="OpenFileDialog::setFilter" ref="a6a6ba92044f6c694fbc35b71f84eb72" args="(char *filter)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OpenFileDialog::setFilter           </td>
+          <td>(</td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>filter</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+установить фильтр типов файлов <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>filter</em>&nbsp;</td><td>- указатель на текстовую строку, содержащую необходимые фильтры </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="ef9ad39ccc2f456ae482e7dbab2eac2b"></a><!-- doxytag: member="OpenFileDialog::show" ref="ef9ad39ccc2f456ae482e7dbab2eac2b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool OpenFileDialog::show           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+отображение диалога <dl class="return" compact><dt><b>Возвращает:</b></dt><dd>true - если диалог закрыт по кнопке ОК, false, если диалог закрыт по кнопке ОТМЕНА </dd></dl>
+
+</div>
+</div><p>
+<hr><h2>Данные класса</h2>
+<a class="anchor" name="468b3965c639457bb31e753f48c7ac9a"></a><!-- doxytag: member="OpenFileDialog::_bufferForFileEditControl" ref="468b3965c639457bb31e753f48c7ac9a" args="[MAX_STRING_LENGTH]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char <a class="el" href="class_open_file_dialog.html#468b3965c639457bb31e753f48c7ac9a">OpenFileDialog::_bufferForFileEditControl</a>[MAX_STRING_LENGTH]<code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Внутренний буфер. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="537a62d46947f9d93498476005ae1285"></a><!-- doxytag: member="OpenFileDialog::_bufferForFileName" ref="537a62d46947f9d93498476005ae1285" args="[MAX_STRING_LENGTH]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char <a class="el" href="class_open_file_dialog.html#537a62d46947f9d93498476005ae1285">OpenFileDialog::_bufferForFileName</a>[MAX_STRING_LENGTH]<code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Буфер, содержащий имя файла. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="e8436f2e2554ac1572e85bd6bf2098a1"></a><!-- doxytag: member="OpenFileDialog::_filename" ref="e8436f2e2554ac1572e85bd6bf2098a1" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">OPENFILENAME <a class="el" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">OpenFileDialog::_filename</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+структура, определяемая Win32API. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="addd566abcd49aeff33fb92211b13358"></a><!-- doxytag: member="OpenFileDialog::_filter" ref="addd566abcd49aeff33fb92211b13358" args="[MAX_STRING_LENGTH]" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char <a class="el" href="class_open_file_dialog.html#addd566abcd49aeff33fb92211b13358">OpenFileDialog::_filter</a>[MAX_STRING_LENGTH]<code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+буфер, содержащий фильтры имени файла. 
+<p>
+
+</div>
+</div><p>
+<hr>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="_open_file_dialog_8h.html">OpenFileDialog.h</a><li><a class="el" href="_open_file_dialog_8cpp.html">OpenFileDialog.cpp</a></ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Документация по RobotWar. Последние изменения: Mon Jan 12 00:07:12 2009. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
+</body>
+</html>

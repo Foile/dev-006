@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>RobotWar: Исходный файл D:/Development/SoftEngineering/Pavlin-Co/cppRoboGame/CppRobotWars/CppRobotWars/RobotInternal.cpp</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.5.7.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&nbsp;имен</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&nbsp;членов&nbsp;всех&nbsp;файлов</span></a></li>
+    </ul>
+  </div>
+<h1>D:/Development/SoftEngineering/Pavlin-Co/cppRoboGame/CppRobotWars/CppRobotWars/RobotInternal.cpp</h1><a href="_robot_internal_8cpp.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include "<a class="code" href="_robot_internal_8h.html">RobotInternal.h</a>"</span>
+<a name="l00002"></a>00002 
+<a name="l00003"></a>00003 <span class="keyword">using namespace </span>RobotWar;
+<a name="l00004"></a>00004 
+<a name="l00005"></a><a class="code" href="class_robot_war_1_1_robot_internal.html#d709785293e675e4c8c3fab87c7726dc">00005</a> RobotInternal::RobotInternal(<a class="code" href="class_robot_war_1_1_i_robot.html">IRobot</a> *pRobot,<a class="code" href="class_robot_war_1_1_i_robot_operation.html">IRobotOperation</a> *Kernel)
+<a name="l00006"></a>00006 : m_Healt(100)
+<a name="l00007"></a>00007 , m_X(0)
+<a name="l00008"></a>00008 , m_Y(0)
+<a name="l00009"></a>00009 , m_pGamerRobot(pRobot)
+<a name="l00010"></a>00010 , m_Kernel(Kernel)
+<a name="l00011"></a>00011 {
+<a name="l00012"></a>00012 }
+<a name="l00013"></a>00013 
+<a name="l00014"></a><a class="code" href="class_robot_war_1_1_robot_internal.html#d670dc6d4fd35ef39fefbe7f485da335">00014</a> <a class="code" href="class_robot_war_1_1_robot_internal.html#d670dc6d4fd35ef39fefbe7f485da335" title="деструктор.">RobotInternal::~RobotInternal</a>(<span class="keywordtype">void</span>)
+<a name="l00015"></a>00015 {
+<a name="l00016"></a>00016         <span class="keyword">delete</span> <a class="code" href="class_robot_war_1_1_robot_internal.html#b135ea5cab0e9e285eb2dab7fc037821" title="Указатель на объект робота, класс которого реализован...">m_pGamerRobot</a>;
+<a name="l00017"></a>00017 }
+<a name="l00018"></a>00018 
+<a name="l00019"></a><a class="code" href="class_robot_war_1_1_robot_internal.html#5c6168a8f96658e8dba054439594bf29">00019</a> <span class="keywordtype">char</span>* <a class="code" href="class_robot_war_1_1_robot_internal.html#5c6168a8f96658e8dba054439594bf29" title="Возвращает имя робота, которому соответствует...">RobotInternal::getName</a>(<span class="keywordtype">void</span>)
+<a name="l00020"></a>00020 {
+<a name="l00021"></a>00021         <span class="keywordflow">return</span> <a class="code" href="class_robot_war_1_1_robot_internal.html#b135ea5cab0e9e285eb2dab7fc037821" title="Указатель на объект робота, класс которого реализован...">m_pGamerRobot</a>-&gt;<a class="code" href="class_robot_war_1_1_i_robot.html#88fd05feb39505b7fdbbf8b0f3fb9fcd" title="Получение имени робота. Возвращает имя робота...">getName</a>();
+<a name="l00022"></a>00022 }
+<a name="l00023"></a>00023 
+<a name="l00024"></a><a class="code" href="class_robot_war_1_1_robot_internal.html#116786b4f45c389f165122c9280344f2">00024</a> <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_robot_internal.html#116786b4f45c389f165122c9280344f2" title="Обеспечивает прием сообщений, которые отправляют...">RobotInternal::ReceiveMessage</a>(<span class="keywordtype">char</span>* RobotName, <span class="keywordtype">void</span>* TalkData)
+<a name="l00025"></a>00025 {
+<a name="l00026"></a>00026         <span class="keywordflow">return</span> <a class="code" href="class_robot_war_1_1_robot_internal.html#b135ea5cab0e9e285eb2dab7fc037821" title="Указатель на объект робота, класс которого реализован...">m_pGamerRobot</a>-&gt;<a class="code" href="class_robot_war_1_1_i_robot.html#9833add5b69871831a10ef992e41c6ef" title="Прием сообщеия. Вызывается ядром программы,...">ReceiveMessage</a>(RobotName,TalkData);
+<a name="l00027"></a>00027 }
+<a name="l00028"></a>00028 
+<a name="l00029"></a><a class="code" href="class_robot_war_1_1_robot_internal.html#721ada570ac633b74e47f4a946c80af0">00029</a> <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_robot_internal.html#0d20675e3aca2493c761973fdf1ae0f7" title="Метод выполнения потока робота.">RobotInternal::Execute</a>(<a class="code" href="class_robot_war_1_1_i_robot_operation.html">IRobotOperation</a> *Engine)
+<a name="l00030"></a>00030 {
+<a name="l00031"></a>00031         <span class="comment">//вот здесь надо создать новый поток, в котором и следует вызвать Execute</span>
+<a name="l00032"></a>00032 }
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Документация по RobotWar. Последние изменения: Fri Jan 9 13:33:54 2009. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
+</body>
+</html>

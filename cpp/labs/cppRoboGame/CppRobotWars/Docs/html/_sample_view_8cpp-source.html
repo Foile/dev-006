@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>RobotWar: Исходный файл D:/Development/SoftEngineering/Pavlin-Co/cppRoboGame/CppRobotWars/CppRobotWars/SampleView.cpp</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.5.7.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&nbsp;имен</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&nbsp;членов&nbsp;всех&nbsp;файлов</span></a></li>
+    </ul>
+  </div>
+<h1>D:/Development/SoftEngineering/Pavlin-Co/cppRoboGame/CppRobotWars/CppRobotWars/SampleView.cpp</h1><a href="_sample_view_8cpp.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include "<a class="code" href="_sample_view_8h.html">SampleView.h</a>"</span>
+<a name="l00002"></a>00002 
+<a name="l00003"></a><a class="code" href="class_sample_view.html#5f91daf3834b57bc256cd1578baacb29">00003</a> <a class="code" href="class_sample_view.html#5f91daf3834b57bc256cd1578baacb29">SampleView::SampleView</a>(HWND hWnd) : m_hWnd(hWnd)
+<a name="l00004"></a>00004 {
+<a name="l00005"></a>00005         <a class="code" href="class_sample_view.html#8ef4e55ba0acc5bec6e79885efb6763d" title="Контекст окна.">m_HDC</a> = GetDC(hWnd);
+<a name="l00006"></a>00006 }
+<a name="l00007"></a>00007 
+<a name="l00008"></a><a class="code" href="class_sample_view.html#89f5f62f59e73a40c7aa7ab420e51e42">00008</a> <a class="code" href="class_sample_view.html#89f5f62f59e73a40c7aa7ab420e51e42" title="деструктор.">SampleView::~SampleView</a>(<span class="keywordtype">void</span>)
+<a name="l00009"></a>00009 {
+<a name="l00010"></a>00010         ReleaseDC(<a class="code" href="class_sample_view.html#1423d923ccb9b6bff8f5db65e794b665" title="Дескриптор окна.">m_hWnd</a>,<a class="code" href="class_sample_view.html#8ef4e55ba0acc5bec6e79885efb6763d" title="Контекст окна.">m_HDC</a>);
+<a name="l00011"></a>00011 }
+<a name="l00012"></a>00012 
+<a name="l00013"></a><a class="code" href="class_sample_view.html#5c62420edab88275ca8ff44644c6a614">00013</a> <span class="keywordtype">void</span> <a class="code" href="class_sample_view.html#5c62420edab88275ca8ff44644c6a614">SampleView::Update</a>(<a class="code" href="class_robot_war_1_1_m_v_c_1_1_move_event.html">MoveEvent</a> &amp;e)
+<a name="l00014"></a>00014 {
+<a name="l00015"></a>00015         <span class="keywordtype">int</span> x = e.<a class="code" href="class_robot_war_1_1_m_v_c_1_1_move_event.html#afaa10b2a65d0e287a5a6500aec70c78" title="получение старой координаты x.">GetOldX</a>();
+<a name="l00016"></a>00016         <span class="keywordtype">int</span> y = e.<a class="code" href="class_robot_war_1_1_m_v_c_1_1_move_event.html#fbfb8cd61b2917c8384e88e3f11ac09e" title="получение старой координты y.">GetOldY</a>();
+<a name="l00017"></a>00017         RECT rOld = {x,y,x+40,y+40};
+<a name="l00018"></a>00018         FillRect(<a class="code" href="class_sample_view.html#8ef4e55ba0acc5bec6e79885efb6763d" title="Контекст окна.">m_HDC</a>,&amp;rOld,(HBRUSH)GetStockObject(WHITE_BRUSH));
+<a name="l00019"></a>00019 
+<a name="l00020"></a>00020         x = e.<a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html#82c1649a80c095f494891be80b03f513">GetSender</a>()-&gt;<a class="code" href="class_robot_war_1_1_robot_internal.html#0772bfadb17056f280060f41ae39c6ad" title="возвращает координату x робота.">getX</a>();
+<a name="l00021"></a>00021         y = e.<a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html#82c1649a80c095f494891be80b03f513">GetSender</a>()-&gt;<a class="code" href="class_robot_war_1_1_robot_internal.html#190921772c8d54f6d5252613d6d90f99" title="возвращает координату y робота.">getY</a>();
+<a name="l00022"></a>00022         RECT rNew = {x,y,x+40,y+40};
+<a name="l00023"></a>00023         FillRect(<a class="code" href="class_sample_view.html#8ef4e55ba0acc5bec6e79885efb6763d" title="Контекст окна.">m_HDC</a>,&amp;rNew,(HBRUSH)GetStockObject(GRAY_BRUSH));
+<a name="l00024"></a>00024 }
+<a name="l00025"></a><a class="code" href="class_sample_view.html#56cf9f218149de55e1bd139e7584db2e">00025</a> <span class="keywordtype">void</span> <a class="code" href="class_sample_view.html#5c62420edab88275ca8ff44644c6a614">SampleView::Update</a>(<a class="code" href="class_robot_war_1_1_m_v_c_1_1_talk_event.html">TalkEvent</a> &amp;e)
+<a name="l00026"></a>00026 {
+<a name="l00027"></a>00027         <span class="comment">//TO DO</span>
+<a name="l00028"></a>00028 }
+<a name="l00029"></a>00029 
+<a name="l00030"></a><a class="code" href="class_sample_view.html#c198780d332071e5c0643d34bf16edfb">00030</a> <span class="keywordtype">void</span> <a class="code" href="class_sample_view.html#5c62420edab88275ca8ff44644c6a614">SampleView::Update</a>(<a class="code" href="class_robot_war_1_1_m_v_c_1_1_new_robot_event.html">NewRobotEvent</a> &amp;e)
+<a name="l00031"></a>00031 {
+<a name="l00032"></a>00032         <span class="keywordtype">int</span> x = e.<a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html#82c1649a80c095f494891be80b03f513">GetSender</a>()-&gt;<a class="code" href="class_robot_war_1_1_robot_internal.html#0772bfadb17056f280060f41ae39c6ad" title="возвращает координату x робота.">getX</a>();
+<a name="l00033"></a>00033         <span class="keywordtype">int</span> y = e.<a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html#82c1649a80c095f494891be80b03f513">GetSender</a>()-&gt;<a class="code" href="class_robot_war_1_1_robot_internal.html#190921772c8d54f6d5252613d6d90f99" title="возвращает координату y робота.">getY</a>();
+<a name="l00034"></a>00034         RECT r = {x,y,x+40,y+40};
+<a name="l00035"></a>00035         FillRect(<a class="code" href="class_sample_view.html#8ef4e55ba0acc5bec6e79885efb6763d" title="Контекст окна.">m_HDC</a>,&amp;r,(HBRUSH)GetStockObject(GRAY_BRUSH));
+<a name="l00036"></a>00036 }
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Документация по RobotWar. Последние изменения: Fri Jan 9 13:33:54 2009. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
+</body>
+</html>

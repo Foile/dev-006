@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>RobotWar: Исходный файл D:/Development/SoftEngineering/Pavlin-Co/cppRoboGame/CppRobotWars/CppRobotWars/DllHelper.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.5.7.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&nbsp;имен</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&nbsp;членов&nbsp;всех&nbsp;файлов</span></a></li>
+    </ul>
+  </div>
+<h1>D:/Development/SoftEngineering/Pavlin-Co/cppRoboGame/CppRobotWars/CppRobotWars/DllHelper.h</h1><a href="_dll_helper_8h.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#pragma once</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#include &lt;windows.h&gt;</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include "RobotWarException.h"</span>
+<a name="l00004"></a><a class="code" href="namespace_robot_war.html">00004</a> <span class="keyword">namespace </span>RobotWar
+<a name="l00005"></a>00005 {
+<a name="l00009"></a><a class="code" href="class_robot_war_1_1_dll_exception.html">00009</a>         <span class="keyword">class </span><a class="code" href="class_robot_war_1_1_dll_exception.html">DllException</a> : <span class="keyword">public</span> <a class="code" href="class_robot_war_exception.html">RobotWarException</a>
+<a name="l00010"></a>00010         {
+<a name="l00011"></a>00011         };
+<a name="l00016"></a><a class="code" href="class_robot_war_1_1_load_dll_exception.html">00016</a>         <span class="keyword">class </span><a class="code" href="class_robot_war_1_1_load_dll_exception.html">LoadDllException</a> : <span class="keyword">public</span> <a class="code" href="class_robot_war_1_1_dll_exception.html">DllException</a>
+<a name="l00017"></a>00017         {
+<a name="l00018"></a>00018         };
+<a name="l00022"></a><a class="code" href="class_robot_war_1_1_binding_proc_dll_exception.html">00022</a>         <span class="keyword">class </span><a class="code" href="class_robot_war_1_1_binding_proc_dll_exception.html">BindingProcDllException</a>: <span class="keyword">public</span> <a class="code" href="class_robot_war_1_1_dll_exception.html">DllException</a>
+<a name="l00023"></a>00023         {
+<a name="l00024"></a>00024         };
+<a name="l00025"></a><a class="code" href="namespace_robot_war_1_1_infrastructure.html">00025</a> <span class="keyword">namespace </span>Infrastructure
+<a name="l00026"></a>00026  {
+<a name="l00030"></a><a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html">00030</a>          <span class="keyword">class </span><a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html">DllHelper</a> : <span class="keyword">public</span> <a class="code" href="class_robot_war_1_1_i_robot_factory.html">IRobotFactory</a>
+<a name="l00031"></a>00031         {
+<a name="l00032"></a>00032         <span class="keyword">private</span>:
+<a name="l00033"></a><a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#759bb4e9574b97cd147383af318ec37e">00033</a>                 HMODULE <a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#759bb4e9574b97cd147383af318ec37e">m_hModule</a>;
+<a name="l00034"></a><a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#629865151182a64114b970b9d31c658e">00034</a>                 <span class="keywordtype">char</span>* <a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#629865151182a64114b970b9d31c658e">m_DllObjectClassName</a>;
+<a name="l00035"></a>00035         <span class="keyword">public</span>:
+<a name="l00036"></a>00036                 <a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#1b897f2c2d099c4f9348ad4521148b84">DllHelper</a>(<span class="keywordtype">char</span>* Path);
+<a name="l00037"></a>00037                 <a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#87ecb830d4ef79dbfd1ec7fb46fd8a18">~DllHelper</a>(<span class="keywordtype">void</span>);
+<a name="l00038"></a>00038                 <span class="keywordtype">void</span>* <a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#23abf4dcc958e5ccbd2da344cce066a4">CreateInstance</a>(<span class="keywordtype">char</span>* DllObjectClassName);
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040                 <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#9f42520b09ce66b74bc9752da622b0ae">FreeInstance</a>(<span class="keywordtype">void</span>);
+<a name="l00041"></a>00041         };
+<a name="l00042"></a>00042  }
+<a name="l00043"></a>00043 }
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Документация по RobotWar. Последние изменения: Fri Jan 9 13:33:53 2009. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
+</body>
+</html>

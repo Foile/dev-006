@@ -1,0 +1,512 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>RobotWar: Класс RobotWar::RobotInternal</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.5.7.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&nbsp;имен</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="classes.html"><span>Алфавитный&nbsp;указатель&nbsp;классов</span></a></li>
+      <li><a href="hierarchy.html"><span>Иерархия&nbsp;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&nbsp;классов</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespace_robot_war.html">RobotWar</a>::<a class="el" href="class_robot_war_1_1_robot_internal.html">RobotInternal</a>
+  </div>
+</div>
+<div class="contents">
+<h1>Класс RobotWar::RobotInternal</h1><!-- doxytag: class="RobotWar::RobotInternal" --><!-- doxytag: inherits="RobotWar::Infrastructure::Thread" -->Класс, реализующий обертку объекта робот, реализованного в DLL. Этот класс необходим для создания потока для выполнения робота, а также для хранения его специфических данных, таких как координата и здоровья.  
+<a href="#_details">Подробнее...</a>
+<p>
+<code>#include &lt;RobotInternal.h&gt;</code>
+<p>
+<div class="dynheader">
+Граф наследования:RobotWar::RobotInternal:</div>
+<div class="dynsection">
+
+<p><center><img src="class_robot_war_1_1_robot_internal.png" usemap="#RobotWar::RobotInternal_map" border="0" alt=""></center>
+<map name="RobotWar::RobotInternal_map">
+<area href="class_robot_war_1_1_infrastructure_1_1_thread.html" alt="RobotWar::Infrastructure::Thread" shape="rect" coords="0,0,195,24">
+</map>
+</div>
+
+<p>
+<a href="class_robot_war_1_1_robot_internal-members.html">Полный список членов класса</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Открытые члены</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_robot_internal.html#d709785293e675e4c8c3fab87c7726dc">RobotInternal</a> (<a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *Robot, <a class="el" href="class_robot_war_1_1_i_robot_operation.html">IRobotOperation</a> *Kernel)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_robot_internal.html#d670dc6d4fd35ef39fefbe7f485da335">~RobotInternal</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">деструктор.  <a href="#d670dc6d4fd35ef39fefbe7f485da335"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_robot_internal.html#5c6168a8f96658e8dba054439594bf29">getName</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Возвращает имя робота, которому соответствует данный объект.  <a href="#5c6168a8f96658e8dba054439594bf29"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_robot_internal.html#116786b4f45c389f165122c9280344f2">ReceiveMessage</a> (char *RobotName, void *TalkData)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Обеспечивает прием сообщений, которые отправляют другие роботы (depricate).  <a href="#116786b4f45c389f165122c9280344f2"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_robot_internal.html#721ada570ac633b74e47f4a946c80af0">Execute</a> (<a class="el" href="class_robot_war_1_1_i_robot_operation.html">IRobotOperation</a> *)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Основной поток ядра.  <a href="#721ada570ac633b74e47f4a946c80af0"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_robot_internal.html#0d8992b6309a8d3b607cbef0de3c4cdf">getHealt</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Возвращает здоровье робота в процентах от 0 до 100.  <a href="#0d8992b6309a8d3b607cbef0de3c4cdf"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_robot_internal.html#0772bfadb17056f280060f41ae39c6ad">getX</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">возвращает координату x робота.  <a href="#0772bfadb17056f280060f41ae39c6ad"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_robot_internal.html#190921772c8d54f6d5252613d6d90f99">getY</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">возвращает координату y робота.  <a href="#190921772c8d54f6d5252613d6d90f99"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_robot_internal.html#a17bcb86e63d3f32e785b56c69dbf1c1">QueryIRobot</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Служебный метод. Возвращает интерфейс на объект, который реализован во внешней DLL.  <a href="#a17bcb86e63d3f32e785b56c69dbf1c1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_robot_internal.html#0d20675e3aca2493c761973fdf1ae0f7">Execute</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Метод выполнения потока робота.  <a href="#0d20675e3aca2493c761973fdf1ae0f7"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_robot_internal.html#587f1bfc7161435e46f7a7f4593e3a2e">SetX</a> (int x)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Установка координаты x робота.  <a href="#587f1bfc7161435e46f7a7f4593e3a2e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_robot_internal.html#55a21630db45d3ab2615911c3569d3dc">SetY</a> (int y)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">установка координаты y робота.  <a href="#55a21630db45d3ab2615911c3569d3dc"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_robot_internal.html#1ed68c3b2ab5a19d9466fa2cdf886682">DecreaseHealth</a> (int value)</td></tr>
+
+<tr><td colspan="2"><br><h2>Защищенные данные</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_robot_internal.html#a513ec7a5a9054b523fc8dd70a6375ad">m_Healt</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">здоровье робота.  <a href="#a513ec7a5a9054b523fc8dd70a6375ad"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_robot_internal.html#abf0751a8739d53155f434c4bb04ba95">m_X</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">координата x робота.  <a href="#abf0751a8739d53155f434c4bb04ba95"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_robot_internal.html#34ac75e5b11c7f6848f35b7f262b7412">m_Y</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">координата y робота.  <a href="#34ac75e5b11c7f6848f35b7f262b7412"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Закрытые данные</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_robot_internal.html#b135ea5cab0e9e285eb2dab7fc037821">m_pGamerRobot</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Указатель на объект робота, класс которого реализован во внешней DLL.  <a href="#b135ea5cab0e9e285eb2dab7fc037821"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="class_robot_war_1_1_i_robot_operation.html">IRobotOperation</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_robot_internal.html#de7da2c0823ce1982592a2bb423621c5">m_Kernel</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Указатель на интерфейс ядра.  <a href="#de7da2c0823ce1982592a2bb423621c5"></a><br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>Подробное описание</h2>
+Класс, реализующий обертку объекта робот, реализованного в DLL. Этот класс необходим для создания потока для выполнения робота, а также для хранения его специфических данных, таких как координата и здоровья. <hr><h2>Конструктор(ы)</h2>
+<a class="anchor" name="d709785293e675e4c8c3fab87c7726dc"></a><!-- doxytag: member="RobotWar::RobotInternal::RobotInternal" ref="d709785293e675e4c8c3fab87c7726dc" args="(IRobot *Robot, IRobotOperation *Kernel)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RobotInternal::RobotInternal           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *&nbsp;</td>
+          <td class="paramname"> <em>Robot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_robot_war_1_1_i_robot_operation.html">IRobotOperation</a> *&nbsp;</td>
+          <td class="paramname"> <em>Kernel</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Конструктор класса <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Robot</em>&nbsp;</td><td>- Указатель на объект робота, класс которого реализован во внешней DLL </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em><a class="el" href="namespace_robot_war_1_1_kernel.html">Kernel</a></em>&nbsp;</td><td>- Указатель на ядро </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="d670dc6d4fd35ef39fefbe7f485da335"></a><!-- doxytag: member="RobotWar::RobotInternal::~RobotInternal" ref="d670dc6d4fd35ef39fefbe7f485da335" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RobotInternal::~RobotInternal           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+деструктор. 
+<p>
+
+</div>
+</div><p>
+<hr><h2>Методы</h2>
+<a class="anchor" name="1ed68c3b2ab5a19d9466fa2cdf886682"></a><!-- doxytag: member="RobotWar::RobotInternal::DecreaseHealth" ref="1ed68c3b2ab5a19d9466fa2cdf886682" args="(int value)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotWar::RobotInternal::DecreaseHealth           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>value</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Уменьшение здоровья робота <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>value</em>&nbsp;</td><td>- значение, на которое уменьшается здоровье </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="0d20675e3aca2493c761973fdf1ae0f7"></a><!-- doxytag: member="RobotWar::RobotInternal::Execute" ref="0d20675e3aca2493c761973fdf1ae0f7" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotWar::RobotInternal::Execute           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Метод выполнения потока робота. 
+<p>
+
+<p>Замещает <a class="el" href="class_robot_war_1_1_infrastructure_1_1_thread.html#469536d44ab5ca813b9fe1b7857a6fbf">RobotWar::Infrastructure::Thread</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="721ada570ac633b74e47f4a946c80af0"></a><!-- doxytag: member="RobotWar::RobotInternal::Execute" ref="721ada570ac633b74e47f4a946c80af0" args="(IRobotOperation *)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotInternal::Execute           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_robot_war_1_1_i_robot_operation.html">IRobotOperation</a> *&nbsp;</td>
+          <td class="paramname"> <em>Engine</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Основной поток ядра. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="0d8992b6309a8d3b607cbef0de3c4cdf"></a><!-- doxytag: member="RobotWar::RobotInternal::getHealt" ref="0d8992b6309a8d3b607cbef0de3c4cdf" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RobotWar::RobotInternal::getHealt           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Возвращает здоровье робота в процентах от 0 до 100. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="5c6168a8f96658e8dba054439594bf29"></a><!-- doxytag: member="RobotWar::RobotInternal::getName" ref="5c6168a8f96658e8dba054439594bf29" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * RobotInternal::getName           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Возвращает имя робота, которому соответствует данный объект. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="0772bfadb17056f280060f41ae39c6ad"></a><!-- doxytag: member="RobotWar::RobotInternal::getX" ref="0772bfadb17056f280060f41ae39c6ad" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RobotWar::RobotInternal::getX           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+возвращает координату x робота. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="190921772c8d54f6d5252613d6d90f99"></a><!-- doxytag: member="RobotWar::RobotInternal::getY" ref="190921772c8d54f6d5252613d6d90f99" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RobotWar::RobotInternal::getY           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+возвращает координату y робота. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="a17bcb86e63d3f32e785b56c69dbf1c1"></a><!-- doxytag: member="RobotWar::RobotInternal::QueryIRobot" ref="a17bcb86e63d3f32e785b56c69dbf1c1" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a>* RobotWar::RobotInternal::QueryIRobot           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Служебный метод. Возвращает интерфейс на объект, который реализован во внешней DLL. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="116786b4f45c389f165122c9280344f2"></a><!-- doxytag: member="RobotWar::RobotInternal::ReceiveMessage" ref="116786b4f45c389f165122c9280344f2" args="(char *RobotName, void *TalkData)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotInternal::ReceiveMessage           </td>
+          <td>(</td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>RobotName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>TalkData</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Обеспечивает прием сообщений, которые отправляют другие роботы (depricate). 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="587f1bfc7161435e46f7a7f4593e3a2e"></a><!-- doxytag: member="RobotWar::RobotInternal::SetX" ref="587f1bfc7161435e46f7a7f4593e3a2e" args="(int x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotWar::RobotInternal::SetX           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>x</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Установка координаты x робота. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="55a21630db45d3ab2615911c3569d3dc"></a><!-- doxytag: member="RobotWar::RobotInternal::SetY" ref="55a21630db45d3ab2615911c3569d3dc" args="(int y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotWar::RobotInternal::SetY           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>y</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+установка координаты y робота. 
+<p>
+
+</div>
+</div><p>
+<hr><h2>Данные класса</h2>
+<a class="anchor" name="a513ec7a5a9054b523fc8dd70a6375ad"></a><!-- doxytag: member="RobotWar::RobotInternal::m_Healt" ref="a513ec7a5a9054b523fc8dd70a6375ad" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_robot_war_1_1_robot_internal.html#a513ec7a5a9054b523fc8dd70a6375ad">RobotWar::RobotInternal::m_Healt</a><code> [protected]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+здоровье робота. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="de7da2c0823ce1982592a2bb423621c5"></a><!-- doxytag: member="RobotWar::RobotInternal::m_Kernel" ref="de7da2c0823ce1982592a2bb423621c5" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_robot_war_1_1_i_robot_operation.html">IRobotOperation</a>* <a class="el" href="class_robot_war_1_1_robot_internal.html#de7da2c0823ce1982592a2bb423621c5">RobotWar::RobotInternal::m_Kernel</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Указатель на интерфейс ядра. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="b135ea5cab0e9e285eb2dab7fc037821"></a><!-- doxytag: member="RobotWar::RobotInternal::m_pGamerRobot" ref="b135ea5cab0e9e285eb2dab7fc037821" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a>* <a class="el" href="class_robot_war_1_1_robot_internal.html#b135ea5cab0e9e285eb2dab7fc037821">RobotWar::RobotInternal::m_pGamerRobot</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Указатель на объект робота, класс которого реализован во внешней DLL. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="abf0751a8739d53155f434c4bb04ba95"></a><!-- doxytag: member="RobotWar::RobotInternal::m_X" ref="abf0751a8739d53155f434c4bb04ba95" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_robot_war_1_1_robot_internal.html#abf0751a8739d53155f434c4bb04ba95">RobotWar::RobotInternal::m_X</a><code> [protected]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+координата x робота. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="34ac75e5b11c7f6848f35b7f262b7412"></a><!-- doxytag: member="RobotWar::RobotInternal::m_Y" ref="34ac75e5b11c7f6848f35b7f262b7412" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_robot_war_1_1_robot_internal.html#34ac75e5b11c7f6848f35b7f262b7412">RobotWar::RobotInternal::m_Y</a><code> [protected]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+координата y робота. 
+<p>
+
+</div>
+</div><p>
+<hr>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="_robot_internal_8h.html">RobotInternal.h</a><li><a class="el" href="_robot_internal_8cpp.html">RobotInternal.cpp</a></ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Документация по RobotWar. Последние изменения: Mon Jan 12 00:07:12 2009. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
+</body>
+</html>

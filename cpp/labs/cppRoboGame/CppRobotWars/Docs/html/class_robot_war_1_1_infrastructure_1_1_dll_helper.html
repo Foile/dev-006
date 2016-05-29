@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>RobotWar: Класс RobotWar::Infrastructure::DllHelper</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.5.7.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&nbsp;имен</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="classes.html"><span>Алфавитный&nbsp;указатель&nbsp;классов</span></a></li>
+      <li><a href="hierarchy.html"><span>Иерархия&nbsp;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&nbsp;классов</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespace_robot_war.html">RobotWar</a>::<a class="el" href="namespace_robot_war_1_1_infrastructure.html">Infrastructure</a>::<a class="el" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html">DllHelper</a>
+  </div>
+</div>
+<div class="contents">
+<h1>Класс RobotWar::Infrastructure::DllHelper</h1><!-- doxytag: class="RobotWar::Infrastructure::DllHelper" --><!-- doxytag: inherits="RobotWar::IRobotFactory" -->Класс загрузчик Dll роботов и создания экземпляра класса, реализующего интерфейс <a class="el" href="class_robot_war_1_1_i_robot.html" title="Интерфейс IRobot реализуется классом пользователя...">IRobot</a>.  
+<a href="#_details">Подробнее...</a>
+<p>
+<code>#include &lt;DllHelper.h&gt;</code>
+<p>
+<div class="dynheader">
+Граф наследования:RobotWar::Infrastructure::DllHelper:</div>
+<div class="dynsection">
+
+<p><center><img src="class_robot_war_1_1_infrastructure_1_1_dll_helper.png" usemap="#RobotWar::Infrastructure::DllHelper_map" border="0" alt=""></center>
+<map name="RobotWar::Infrastructure::DllHelper_map">
+<area href="class_robot_war_1_1_i_robot_factory.html" alt="RobotWar::IRobotFactory" shape="rect" coords="0,0,208,24">
+</map>
+</div>
+
+<p>
+<a href="class_robot_war_1_1_infrastructure_1_1_dll_helper-members.html">Полный список членов класса</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Открытые члены</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#1b897f2c2d099c4f9348ad4521148b84">DllHelper</a> (char *Path)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#87ecb830d4ef79dbfd1ec7fb46fd8a18">~DllHelper</a> (void)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#8b01a19f4340b574afda01aad2ad975e">CreateRobot</a> (char *DllObjectClassName)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#9f42520b09ce66b74bc9752da622b0ae">FreeInstance</a> (void)</td></tr>
+
+<tr><td colspan="2"><br><h2>Закрытые данные</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">HMODULE&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#759bb4e9574b97cd147383af318ec37e">m_hModule</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#629865151182a64114b970b9d31c658e">m_DllObjectClassName</a></td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Подробное описание</h2>
+Класс загрузчик Dll роботов и создания экземпляра класса, реализующего интерфейс <a class="el" href="class_robot_war_1_1_i_robot.html" title="Интерфейс IRobot реализуется классом пользователя...">IRobot</a>. <hr><h2>Конструктор(ы)</h2>
+<a class="anchor" name="1b897f2c2d099c4f9348ad4521148b84"></a><!-- doxytag: member="RobotWar::Infrastructure::DllHelper::DllHelper" ref="1b897f2c2d099c4f9348ad4521148b84" args="(char *Path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DllHelper::DllHelper           </td>
+          <td>(</td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>Path</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="87ecb830d4ef79dbfd1ec7fb46fd8a18"></a><!-- doxytag: member="RobotWar::Infrastructure::DllHelper::~DllHelper" ref="87ecb830d4ef79dbfd1ec7fb46fd8a18" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DllHelper::~DllHelper           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<hr><h2>Методы</h2>
+<a class="anchor" name="8b01a19f4340b574afda01aad2ad975e"></a><!-- doxytag: member="RobotWar::Infrastructure::DllHelper::CreateRobot" ref="8b01a19f4340b574afda01aad2ad975e" args="(char *DllObjectClassName)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> * DllHelper::CreateRobot           </td>
+          <td>(</td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>Name</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Создание робота <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Name</em>&nbsp;</td><td>- Имя создаваемого робота </td></tr>
+  </table>
+</dl>
+
+<p>Замещает <a class="el" href="class_robot_war_1_1_i_robot_factory.html#da387abfd8547f3b6b49f75b6b80e9e9">RobotWar::IRobotFactory</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="9f42520b09ce66b74bc9752da622b0ae"></a><!-- doxytag: member="RobotWar::Infrastructure::DllHelper::FreeInstance" ref="9f42520b09ce66b74bc9752da622b0ae" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotWar::Infrastructure::DllHelper::FreeInstance           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<hr><h2>Данные класса</h2>
+<a class="anchor" name="629865151182a64114b970b9d31c658e"></a><!-- doxytag: member="RobotWar::Infrastructure::DllHelper::m_DllObjectClassName" ref="629865151182a64114b970b9d31c658e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* <a class="el" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#629865151182a64114b970b9d31c658e">RobotWar::Infrastructure::DllHelper::m_DllObjectClassName</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="759bb4e9574b97cd147383af318ec37e"></a><!-- doxytag: member="RobotWar::Infrastructure::DllHelper::m_hModule" ref="759bb4e9574b97cd147383af318ec37e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HMODULE <a class="el" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#759bb4e9574b97cd147383af318ec37e">RobotWar::Infrastructure::DllHelper::m_hModule</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<hr>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="_dll_helper_8h.html">DllHelper.h</a><li><a class="el" href="_dll_helper_8cpp.html">DllHelper.cpp</a></ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Документация по RobotWar. Последние изменения: Mon Jan 12 00:07:12 2009. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
+</body>
+</html>

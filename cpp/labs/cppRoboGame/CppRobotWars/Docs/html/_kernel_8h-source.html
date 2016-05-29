@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>RobotWar: Исходный файл D:/Development/SoftEngineering/Pavlin-Co/cppRoboGame/CppRobotWars/CppRobotWars/Kernel.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.5.7.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&nbsp;имен</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&nbsp;членов&nbsp;всех&nbsp;файлов</span></a></li>
+    </ul>
+  </div>
+<h1>D:/Development/SoftEngineering/Pavlin-Co/cppRoboGame/CppRobotWars/CppRobotWars/Kernel.h</h1><a href="_kernel_8h.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#pragma once</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#include "<a class="code" href="_i_robot_operation_8h.html">irobotoperation.h</a>"</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include "<a class="code" href="_robot_internal_8h.html">RobotInternal.h</a>"</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include "<a class="code" href="_thread_8h.html">thread.h</a>"</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include "RobotWarException.h"</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include "<a class="code" href="_talk_thread_8h.html">TalkThread.h</a>"</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include "<a class="code" href="_event_delegate_8h.html">EventDelegate.h</a>"</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;map&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="keyword">using namespace </span>std;
+<a name="l00012"></a>00012 <span class="keyword">using namespace </span>RobotWar::MVC;
+<a name="l00013"></a>00013 
+<a name="l00014"></a>00014 <span class="keyword">namespace </span>RobotWar
+<a name="l00015"></a>00015 {
+<a name="l00016"></a><a class="code" href="namespace_robot_war_1_1_kernel.html">00016</a>         <span class="keyword">namespace </span><a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html">Kernel</a>
+<a name="l00017"></a>00017         {
+<a name="l00022"></a><a class="code" href="class_robot_war_1_1_kernel_1_1_parameters_contract_error.html">00022</a>         <span class="keyword">class </span><a class="code" href="class_robot_war_1_1_kernel_1_1_parameters_contract_error.html">ParametersContractError</a> : <span class="keyword">public</span> <a class="code" href="class_robot_war_exception.html">RobotWarException</a> 
+<a name="l00023"></a>00023         {
+<a name="l00024"></a>00024         };
+<a name="l00029"></a><a class="code" href="class_robot_war_1_1_kernel_1_1_no_valid_move.html">00029</a>         <span class="keyword">class </span><a class="code" href="class_robot_war_1_1_kernel_1_1_no_valid_move.html">NoValidMove</a> : <span class="keyword">public</span> <a class="code" href="class_robot_war_exception.html">RobotWarException</a>
+<a name="l00030"></a>00030         {
+<a name="l00031"></a>00031         };
+<a name="l00035"></a><a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html">00035</a>         <span class="keyword">class </span><a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html">Kernel</a> :
+<a name="l00036"></a>00036                 <span class="keyword">public</span> <a class="code" href="class_robot_war_1_1_i_robot_operation.html">IRobotOperation</a>, 
+<a name="l00037"></a>00037                 <span class="keyword">public</span> RobotWar::Infrastructure::<a class="code" href="class_robot_war_1_1_infrastructure_1_1_thread.html">Thread</a>
+<a name="l00038"></a>00038         {
+<a name="l00039"></a>00039         <span class="keyword">private</span>:
+<a name="l00041"></a><a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#68fdb4c09d31d342520463c75dea4784">00041</a>                 map&lt;IRobot*,RobotInternal*&gt; <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#68fdb4c09d31d342520463c75dea4784" title="Роботы, которые учавствуют в игре.">m_GameMembersStorage</a>;
+<a name="l00042"></a>00042                 <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#f5ed5aa776085d809e1850b25cec86cf">Kernel</a>(<span class="keywordtype">void</span>);
+<a name="l00044"></a><a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#b2f9aa2a412fb44c69af07abf06eb233">00044</a>                 <span class="keyword">static</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html">Kernel</a> *<a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#b2f9aa2a412fb44c69af07abf06eb233" title="указатель на ядро. Используется в паттерне Singleton...">m_Kernel</a>;
+<a name="l00045"></a>00045         <span class="keyword">public</span>: 
+<a name="l00048"></a><a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#31b5ea827c9dc34c8e4574b95b71e8e7">00048</a>                 <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html">EventDelegate&lt;MoveEvent&gt;</a> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#31b5ea827c9dc34c8e4574b95b71e8e7">OnMove</a>;
+<a name="l00051"></a><a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#fd7f6498ffca451008979a0c972d5af4">00051</a>                 <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html">EventDelegate&lt;FireEvent&gt;</a> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#fd7f6498ffca451008979a0c972d5af4">OnFire</a>;
+<a name="l00054"></a><a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#d2736666c16f310aa5f731aa4d85c5ef">00054</a>                 <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html">EventDelegate&lt;TalkEvent&gt;</a> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#d2736666c16f310aa5f731aa4d85c5ef">OnTalk</a>;
+<a name="l00057"></a><a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#3a716165914ab4d3107c1d3ad5ba0382">00057</a>                 <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html">EventDelegate&lt;NewRobotEvent&gt;</a> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#3a716165914ab4d3107c1d3ad5ba0382">OnNewRobot</a>;
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059                 <span class="keyword">virtual</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#e082d6d9ad28614d8b872d503da2eb5b">~Kernel</a>(<span class="keywordtype">void</span>);
+<a name="l00064"></a>00064                 <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#4edd19769909e8e435f454ca37371d93">Move</a>(<a class="code" href="class_robot_war_1_1_i_robot.html">IRobot</a> *Sender,<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);
+<a name="l00069"></a>00069                 <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#c99cd9bfb2514cbc0c26ad7b5a3a3cab">Fire</a>(<a class="code" href="class_robot_war_1_1_i_robot.html">IRobot</a> *Sender,<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y);
+<a name="l00075"></a>00075                 <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#b50a935a42314fa574aac7e3e6ae8c4a">LookAround</a>(<a class="code" href="class_robot_war_1_1_i_robot.html">IRobot</a> *Sender,<span class="keywordtype">int</span> depth, <span class="keywordtype">int</span> CountPoints, <a class="code" href="struct_robot_war_1_1_c_o_o_r_d.html">RobotWar::COORD</a>* pPoints);
+<a name="l00079"></a>00079                 <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#3f4ad46c810a40fd54df437321eb1404">SendMsg</a>(<a class="code" href="class_robot_war_1_1_i_robot.html">IRobot</a> *Sender,<span class="keywordtype">char</span> *RobotName, <span class="keywordtype">void</span> *TalkData);
+<a name="l00081"></a>00081                 <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#dc95ab3a2d60360ba4f69206950951f1" title="Метод выполнения потока ядраа.">Execute</a>(<span class="keywordtype">void</span>);
+<a name="l00083"></a>00083                 <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#0b3617e9621ee756b333bf35cf8ae9c2" title="Запуск потока ядра (Запуск игры).">Start</a>(<span class="keywordtype">void</span>);
+<a name="l00085"></a>00085                 <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#70d181c09ede65b8307483dcbb4a6cd5" title="Останов потока ядра (Останов игры).">Stop</a>(<span class="keywordtype">void</span>);
+<a name="l00087"></a>00087                 <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#ae470f7cd04de90cc34c2c4493dc8043" title="Приостановка потока.">Suspend</a>(<span class="keywordtype">void</span>);
+<a name="l00089"></a>00089                 <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#c02576b0c0466d14498fa0d58e5ada5f" title="Возобновление потока.">Resume</a>(<span class="keywordtype">void</span>);
+<a name="l00090"></a>00090 
+<a name="l00093"></a>00093                 <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#b48f5c72174de56c7dd425140c985fca">AddRobot</a>(<a class="code" href="class_robot_war_1_1_robot_internal.html">RobotInternal</a>* Robot);
+<a name="l00094"></a>00094             
+<a name="l00095"></a>00095 
+<a name="l00096"></a>00096                 <span class="keyword">static</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html">Kernel</a>* <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#48dba890afb589b2a954fb681bf64908">CreateKernel</a>(<span class="keywordtype">void</span>);
+<a name="l00097"></a>00097         <span class="keyword">private</span>:
+<a name="l00099"></a><a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#3df5ff06ec59217ef7949c93a01076e2">00099</a>                 vector&lt;TalkThread*&gt; <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#3df5ff06ec59217ef7949c93a01076e2" title="список асинхронных сообщений, передаваемых...">m_TalkThreadStorage</a>;
+<a name="l00100"></a>00100         };
+<a name="l00101"></a>00101         }       
+<a name="l00102"></a>00102 }
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Документация по RobotWar. Последние изменения: Fri Jan 9 13:33:54 2009. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
+</body>
+</html>

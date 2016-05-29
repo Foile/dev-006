@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>RobotWar: Исходный файл D:/Development/SoftEngineering/Pavlin-Co/cppRoboGame/CppRobotWars/CppRobotWars/RobotInternal.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.5.7.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&nbsp;имен</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&nbsp;членов&nbsp;всех&nbsp;файлов</span></a></li>
+    </ul>
+  </div>
+<h1>D:/Development/SoftEngineering/Pavlin-Co/cppRoboGame/CppRobotWars/CppRobotWars/RobotInternal.h</h1><a href="_robot_internal_8h.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#pragma once</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#include "<a class="code" href="_i_robot_8h.html">IRobot.h</a>"</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include "<a class="code" href="_thread_8h.html">Thread.h</a>"</span>
+<a name="l00004"></a>00004 
+<a name="l00005"></a>00005 <span class="keyword">using namespace </span>RobotWar::Infrastructure;
+<a name="l00006"></a>00006 
+<a name="l00007"></a>00007 
+<a name="l00008"></a>00008 <span class="keyword">namespace </span>RobotWar
+<a name="l00009"></a>00009 {
+<a name="l00015"></a><a class="code" href="class_robot_war_1_1_robot_internal.html">00015</a> <span class="keyword">class </span><a class="code" href="class_robot_war_1_1_robot_internal.html">RobotInternal</a> :
+<a name="l00016"></a>00016         <span class="keyword">public</span> <a class="code" href="class_robot_war_1_1_infrastructure_1_1_thread.html">Thread</a>
+<a name="l00017"></a>00017 {
+<a name="l00018"></a>00018 <span class="keyword">private</span>:
+<a name="l00020"></a><a class="code" href="class_robot_war_1_1_robot_internal.html#b135ea5cab0e9e285eb2dab7fc037821">00020</a>         <a class="code" href="class_robot_war_1_1_i_robot.html">IRobot</a> *<a class="code" href="class_robot_war_1_1_robot_internal.html#b135ea5cab0e9e285eb2dab7fc037821" title="Указатель на объект робота, класс которого реализован...">m_pGamerRobot</a>;
+<a name="l00022"></a><a class="code" href="class_robot_war_1_1_robot_internal.html#de7da2c0823ce1982592a2bb423621c5">00022</a>         <a class="code" href="class_robot_war_1_1_i_robot_operation.html">IRobotOperation</a> *<a class="code" href="class_robot_war_1_1_robot_internal.html#de7da2c0823ce1982592a2bb423621c5" title="Указатель на интерфейс ядра.">m_Kernel</a>;
+<a name="l00023"></a>00023 <span class="keyword">public</span>:
+<a name="l00027"></a>00027         <a class="code" href="class_robot_war_1_1_robot_internal.html#d709785293e675e4c8c3fab87c7726dc">RobotInternal</a>(<a class="code" href="class_robot_war_1_1_i_robot.html">IRobot</a> *Robot,<a class="code" href="class_robot_war_1_1_i_robot_operation.html">IRobotOperation</a> *Kernel);
+<a name="l00029"></a>00029         <a class="code" href="class_robot_war_1_1_robot_internal.html#d670dc6d4fd35ef39fefbe7f485da335" title="деструктор.">~RobotInternal</a>(<span class="keywordtype">void</span>);
+<a name="l00031"></a>00031         <span class="keywordtype">char</span>* <a class="code" href="class_robot_war_1_1_robot_internal.html#5c6168a8f96658e8dba054439594bf29" title="Возвращает имя робота, которому соответствует...">getName</a>(<span class="keywordtype">void</span>);
+<a name="l00033"></a>00033         <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_robot_internal.html#116786b4f45c389f165122c9280344f2" title="Обеспечивает прием сообщений, которые отправляют...">ReceiveMessage</a>(<span class="keywordtype">char</span>* RobotName, <span class="keywordtype">void</span>* TalkData);
+<a name="l00035"></a>00035         <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_robot_internal.html#0d20675e3aca2493c761973fdf1ae0f7" title="Метод выполнения потока робота.">Execute</a>(<a class="code" href="class_robot_war_1_1_i_robot_operation.html">IRobotOperation</a>*);
+<a name="l00036"></a>00036 <span class="keyword">protected</span>:
+<a name="l00038"></a><a class="code" href="class_robot_war_1_1_robot_internal.html#a513ec7a5a9054b523fc8dd70a6375ad">00038</a>         <span class="keywordtype">int</span> <a class="code" href="class_robot_war_1_1_robot_internal.html#a513ec7a5a9054b523fc8dd70a6375ad" title="здоровье робота.">m_Healt</a>;
+<a name="l00040"></a><a class="code" href="class_robot_war_1_1_robot_internal.html#abf0751a8739d53155f434c4bb04ba95">00040</a>         <span class="keywordtype">int</span> <a class="code" href="class_robot_war_1_1_robot_internal.html#abf0751a8739d53155f434c4bb04ba95" title="координата x робота.">m_X</a>;
+<a name="l00042"></a><a class="code" href="class_robot_war_1_1_robot_internal.html#34ac75e5b11c7f6848f35b7f262b7412">00042</a>         <span class="keywordtype">int</span> <a class="code" href="class_robot_war_1_1_robot_internal.html#34ac75e5b11c7f6848f35b7f262b7412" title="координата y робота.">m_Y</a>;
+<a name="l00043"></a>00043 <span class="keyword">public</span>:
+<a name="l00044"></a>00044 
+<a name="l00046"></a><a class="code" href="class_robot_war_1_1_robot_internal.html#0d8992b6309a8d3b607cbef0de3c4cdf">00046</a>         <span class="keywordtype">int</span> <a class="code" href="class_robot_war_1_1_robot_internal.html#0d8992b6309a8d3b607cbef0de3c4cdf" title="Возвращает здоровье робота в процентах от 0 до...">getHealt</a>(<span class="keywordtype">void</span>)
+<a name="l00047"></a>00047         {
+<a name="l00048"></a>00048                 <span class="keywordflow">return</span> <a class="code" href="class_robot_war_1_1_robot_internal.html#a513ec7a5a9054b523fc8dd70a6375ad" title="здоровье робота.">m_Healt</a>;
+<a name="l00049"></a>00049         }
+<a name="l00051"></a><a class="code" href="class_robot_war_1_1_robot_internal.html#0772bfadb17056f280060f41ae39c6ad">00051</a>         <span class="keywordtype">int</span> <a class="code" href="class_robot_war_1_1_robot_internal.html#0772bfadb17056f280060f41ae39c6ad" title="возвращает координату x робота.">getX</a>(<span class="keywordtype">void</span>)
+<a name="l00052"></a>00052         {
+<a name="l00053"></a>00053                 <span class="keywordflow">return</span> <a class="code" href="class_robot_war_1_1_robot_internal.html#abf0751a8739d53155f434c4bb04ba95" title="координата x робота.">m_X</a>;
+<a name="l00054"></a>00054         }
+<a name="l00056"></a>00056 
+<a name="l00057"></a><a class="code" href="class_robot_war_1_1_robot_internal.html#190921772c8d54f6d5252613d6d90f99">00057</a>         <span class="keywordtype">int</span> <a class="code" href="class_robot_war_1_1_robot_internal.html#190921772c8d54f6d5252613d6d90f99" title="возвращает координату y робота.">getY</a>(<span class="keywordtype">void</span>)
+<a name="l00058"></a>00058         {
+<a name="l00059"></a>00059                 <span class="keywordflow">return</span> <a class="code" href="class_robot_war_1_1_robot_internal.html#34ac75e5b11c7f6848f35b7f262b7412" title="координата y робота.">m_Y</a>;
+<a name="l00060"></a>00060         }
+<a name="l00061"></a>00061 
+<a name="l00063"></a><a class="code" href="class_robot_war_1_1_robot_internal.html#a17bcb86e63d3f32e785b56c69dbf1c1">00063</a>         <a class="code" href="class_robot_war_1_1_i_robot.html">IRobot</a>* <a class="code" href="class_robot_war_1_1_robot_internal.html#a17bcb86e63d3f32e785b56c69dbf1c1" title="Служебный метод. Возвращает интерфейс на объект...">QueryIRobot</a>(<span class="keywordtype">void</span>)
+<a name="l00064"></a>00064         {
+<a name="l00065"></a>00065                 <span class="keywordflow">return</span> <a class="code" href="class_robot_war_1_1_robot_internal.html#b135ea5cab0e9e285eb2dab7fc037821" title="Указатель на объект робота, класс которого реализован...">m_pGamerRobot</a>;
+<a name="l00066"></a>00066         }
+<a name="l00067"></a>00067 
+<a name="l00069"></a><a class="code" href="class_robot_war_1_1_robot_internal.html#0d20675e3aca2493c761973fdf1ae0f7">00069</a>         <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_robot_internal.html#0d20675e3aca2493c761973fdf1ae0f7" title="Метод выполнения потока робота.">Execute</a>() 
+<a name="l00070"></a>00070         {
+<a name="l00071"></a>00071                 <a class="code" href="class_robot_war_1_1_robot_internal.html#b135ea5cab0e9e285eb2dab7fc037821" title="Указатель на объект робота, класс которого реализован...">m_pGamerRobot</a>-&gt;<a class="code" href="class_robot_war_1_1_i_robot.html#5aa7967c5604773e28db31f167b7bf46" title="Метод выполнения потока робота. Этот метод вызывается...">Execute</a>(<a class="code" href="class_robot_war_1_1_robot_internal.html#de7da2c0823ce1982592a2bb423621c5" title="Указатель на интерфейс ядра.">m_Kernel</a>);
+<a name="l00072"></a>00072         }       
+<a name="l00073"></a>00073 
+<a name="l00075"></a><a class="code" href="class_robot_war_1_1_robot_internal.html#587f1bfc7161435e46f7a7f4593e3a2e">00075</a>         <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_robot_internal.html#587f1bfc7161435e46f7a7f4593e3a2e" title="Установка координаты x робота.">SetX</a>(<span class="keywordtype">int</span> x)
+<a name="l00076"></a>00076         {
+<a name="l00077"></a>00077                 <a class="code" href="class_robot_war_1_1_robot_internal.html#abf0751a8739d53155f434c4bb04ba95" title="координата x робота.">m_X</a> = x;
+<a name="l00078"></a>00078         }
+<a name="l00080"></a><a class="code" href="class_robot_war_1_1_robot_internal.html#55a21630db45d3ab2615911c3569d3dc">00080</a>         <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_robot_internal.html#55a21630db45d3ab2615911c3569d3dc" title="установка координаты y робота.">SetY</a>(<span class="keywordtype">int</span> y)
+<a name="l00081"></a>00081         {
+<a name="l00082"></a>00082                 <a class="code" href="class_robot_war_1_1_robot_internal.html#34ac75e5b11c7f6848f35b7f262b7412" title="координата y робота.">m_Y</a> = y;
+<a name="l00083"></a>00083         }
+<a name="l00084"></a>00084 
+<a name="l00087"></a><a class="code" href="class_robot_war_1_1_robot_internal.html#1ed68c3b2ab5a19d9466fa2cdf886682">00087</a>         <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_robot_internal.html#1ed68c3b2ab5a19d9466fa2cdf886682">DecreaseHealth</a>(<span class="keywordtype">int</span> value)
+<a name="l00088"></a>00088         {
+<a name="l00089"></a>00089                 <a class="code" href="class_robot_war_1_1_robot_internal.html#a513ec7a5a9054b523fc8dd70a6375ad" title="здоровье робота.">m_Healt</a> -= value;
+<a name="l00090"></a>00090         }
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092 };
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094 }
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Документация по RobotWar. Последние изменения: Fri Jan 9 13:33:54 2009. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
+</body>
+</html>

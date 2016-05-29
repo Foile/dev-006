@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>RobotWar: Исходный файл D:/Development/SoftEngineering/Pavlin-Co/cppRoboGame/CppRobotWars/CppRobotWars/DllHelper.cpp</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.5.7.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&nbsp;имен</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&nbsp;членов&nbsp;всех&nbsp;файлов</span></a></li>
+    </ul>
+  </div>
+<h1>D:/Development/SoftEngineering/Pavlin-Co/cppRoboGame/CppRobotWars/CppRobotWars/DllHelper.cpp</h1><a href="_dll_helper_8cpp.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include "<a class="code" href="_dll_helper_8h.html">DllHelper.h</a>"</span>
+<a name="l00002"></a>00002 
+<a name="l00003"></a>00003 <span class="keyword">using namespace </span>RobotWar;
+<a name="l00004"></a>00004 <span class="keyword">using namespace </span>RobotWar::Infrastructure;
+<a name="l00005"></a>00005 
+<a name="l00006"></a>00006 <span class="preprocessor">#pragma warning(disable : 4996)</span>
+<a name="l00007"></a>00007 <span class="preprocessor"></span>
+<a name="l00008"></a><a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#1b897f2c2d099c4f9348ad4521148b84">00008</a> DllHelper::DllHelper(<span class="keywordtype">char</span>* Path): m_hModule(NULL),m_DllObjectClassName(NULL)
+<a name="l00009"></a>00009 {
+<a name="l00010"></a>00010         <span class="keywordflow">if</span>(!(<a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#759bb4e9574b97cd147383af318ec37e">m_hModule</a> = LoadLibrary(Path)))  
+<a name="l00011"></a>00011                 <span class="keywordflow">throw</span> <a class="code" href="class_robot_war_1_1_load_dll_exception.html">LoadDllException</a>();
+<a name="l00012"></a>00012 }
+<a name="l00013"></a>00013 
+<a name="l00014"></a><a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#87ecb830d4ef79dbfd1ec7fb46fd8a18">00014</a> <a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#87ecb830d4ef79dbfd1ec7fb46fd8a18">DllHelper::~DllHelper</a>(<span class="keywordtype">void</span>)
+<a name="l00015"></a>00015 {
+<a name="l00016"></a>00016  
+<a name="l00017"></a>00017 <span class="keywordflow">if</span>(<a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#759bb4e9574b97cd147383af318ec37e">m_hModule</a>)           
+<a name="l00018"></a>00018  FreeLibrary(<a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#759bb4e9574b97cd147383af318ec37e">m_hModule</a>);
+<a name="l00019"></a>00019 }
+<a name="l00020"></a>00020 
+<a name="l00021"></a><a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#23abf4dcc958e5ccbd2da344cce066a4">00021</a> <span class="keywordtype">void</span>* <a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#23abf4dcc958e5ccbd2da344cce066a4">DllHelper::CreateInstance</a>(<span class="keywordtype">char</span>* DllObjectClassName)
+<a name="l00022"></a>00022 {
+<a name="l00023"></a>00023  <span class="keyword">typedef</span> void (*FPointer)(<span class="keywordtype">void</span>**);
+<a name="l00024"></a>00024 
+<a name="l00025"></a>00025         <span class="keywordflow">if</span>(!DllObjectClassName) <span class="keywordflow">throw</span> <a class="code" href="class_robot_war_exception.html">RobotWarException</a>();
+<a name="l00026"></a>00026  <a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#629865151182a64114b970b9d31c658e">m_DllObjectClassName</a> = <span class="keyword">new</span> <span class="keywordtype">char</span>[strlen(DllObjectClassName)+1];
+<a name="l00027"></a>00027  strcpy(<a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#629865151182a64114b970b9d31c658e">m_DllObjectClassName</a>,DllObjectClassName);
+<a name="l00028"></a>00028  <span class="keywordtype">char</span> *Prefix = <span class="stringliteral">"Create"</span>;
+<a name="l00029"></a>00029  <span class="keywordtype">char</span> *FullInvokeName = <span class="keyword">new</span> <span class="keywordtype">char</span>[strlen(<a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#629865151182a64114b970b9d31c658e">m_DllObjectClassName</a>)+1+strlen(Prefix)];
+<a name="l00030"></a>00030  strcpy(FullInvokeName,Prefix);
+<a name="l00031"></a>00031  strcat(FullInvokeName,<a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#629865151182a64114b970b9d31c658e">m_DllObjectClassName</a>);
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033  FPointer ptrfCreateObject = (FPointer) GetProcAddress(<a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#759bb4e9574b97cd147383af318ec37e">m_hModule</a>,FullInvokeName);
+<a name="l00034"></a>00034  <span class="keywordflow">if</span>(!ptrfCreateObject) <span class="keywordflow">throw</span> <a class="code" href="class_robot_war_1_1_binding_proc_dll_exception.html">BindingProcDllException</a>();
+<a name="l00035"></a>00035  
+<a name="l00036"></a>00036  <span class="keywordtype">void</span> *ptrInterface;
+<a name="l00037"></a>00037  ptrfCreateObject(&amp;ptrInterface);
+<a name="l00038"></a>00038  <span class="keyword">delete</span>[]FullInvokeName;
+<a name="l00039"></a>00039  <span class="keywordflow">return</span> ptrInterface;
+<a name="l00040"></a>00040  
+<a name="l00041"></a>00041 }
+<a name="l00042"></a>00042 
+<a name="l00043"></a><a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#9f42520b09ce66b74bc9752da622b0ae">00043</a> <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#9f42520b09ce66b74bc9752da622b0ae">RobotWar::Infrastructure::DllHelper::FreeInstance</a>(<span class="keywordtype">void</span>)
+<a name="l00044"></a>00044 {
+<a name="l00045"></a>00045 <span class="keyword">typedef</span> void (*FPointer)();
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047  <span class="keywordflow">if</span>(<a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#629865151182a64114b970b9d31c658e">m_DllObjectClassName</a>)
+<a name="l00048"></a>00048  {
+<a name="l00049"></a>00049         <span class="keywordtype">char</span> *Prefix = <span class="stringliteral">"Destroy"</span>;
+<a name="l00050"></a>00050         <span class="keywordtype">char</span> *FullInvokeName = <span class="keyword">new</span> <span class="keywordtype">char</span>[strlen(<a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#629865151182a64114b970b9d31c658e">m_DllObjectClassName</a>)+1+strlen(Prefix)];
+<a name="l00051"></a>00051         strcpy(FullInvokeName,Prefix);
+<a name="l00052"></a>00052         strcat(FullInvokeName,<a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#629865151182a64114b970b9d31c658e">m_DllObjectClassName</a>);
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054          FPointer ptrfDestroyObject = (FPointer) GetProcAddress(<a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#759bb4e9574b97cd147383af318ec37e">m_hModule</a>,FullInvokeName);
+<a name="l00055"></a>00055         <span class="keywordflow">if</span>(!ptrfDestroyObject) <span class="keywordflow">throw</span> <a class="code" href="class_robot_war_1_1_binding_proc_dll_exception.html">BindingProcDllException</a>();
+<a name="l00056"></a>00056  
+<a name="l00057"></a>00057         ptrfDestroyObject();
+<a name="l00058"></a>00058         <span class="keyword">delete</span>[]FullInvokeName;
+<a name="l00059"></a>00059  }
+<a name="l00060"></a>00060 }
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Документация по RobotWar. Последние изменения: Fri Jan 9 13:33:53 2009. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
+</body>
+</html>

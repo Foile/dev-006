@@ -1,0 +1,314 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>RobotWar: Класс RobotWar::Infrastructure::Thread</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.5.7.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&nbsp;имен</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="classes.html"><span>Алфавитный&nbsp;указатель&nbsp;классов</span></a></li>
+      <li><a href="hierarchy.html"><span>Иерархия&nbsp;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&nbsp;классов</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespace_robot_war.html">RobotWar</a>::<a class="el" href="namespace_robot_war_1_1_infrastructure.html">Infrastructure</a>::<a class="el" href="class_robot_war_1_1_infrastructure_1_1_thread.html">Thread</a>
+  </div>
+</div>
+<div class="contents">
+<h1>Класс RobotWar::Infrastructure::Thread</h1><!-- doxytag: class="RobotWar::Infrastructure::Thread" -->Класс потока. Используется для организации потоковых объектов.  
+<a href="#_details">Подробнее...</a>
+<p>
+<code>#include &lt;Thread.h&gt;</code>
+<p>
+<div class="dynheader">
+Граф наследования:RobotWar::Infrastructure::Thread:</div>
+<div class="dynsection">
+
+<p><center><img src="class_robot_war_1_1_infrastructure_1_1_thread.png" usemap="#RobotWar::Infrastructure::Thread_map" border="0" alt=""></center>
+<map name="RobotWar::Infrastructure::Thread_map">
+<area href="class_robot_war_1_1_kernel_1_1_kernel.html" alt="RobotWar::Kernel::Kernel" shape="rect" coords="0,56,195,80">
+<area href="class_robot_war_1_1_kernel_1_1_talk_thread.html" alt="RobotWar::Kernel::TalkThread" shape="rect" coords="205,56,400,80">
+<area href="class_robot_war_1_1_robot_internal.html" alt="RobotWar::RobotInternal" shape="rect" coords="410,56,605,80">
+</map>
+</div>
+
+<p>
+<a href="class_robot_war_1_1_infrastructure_1_1_thread-members.html">Полный список членов класса</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Открытые члены</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_infrastructure_1_1_thread.html#3ad909f591333628c22cb5ba10957923">Thread</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">конструктор класса.  <a href="#3ad909f591333628c22cb5ba10957923"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_infrastructure_1_1_thread.html#f1e25588ebe47a2a6d79ef8c686a992b">~Thread</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">деструктор.  <a href="#f1e25588ebe47a2a6d79ef8c686a992b"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_infrastructure_1_1_thread.html#469536d44ab5ca813b9fe1b7857a6fbf">Execute</a> (void)=0</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">метод выполнения потока.  <a href="#469536d44ab5ca813b9fe1b7857a6fbf"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_infrastructure_1_1_thread.html#107c735b49292fa76e2ae2225eee133e">Suspend</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">приостановка потока.  <a href="#107c735b49292fa76e2ae2225eee133e"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_infrastructure_1_1_thread.html#8175399e8cca4cbb8bde04ac4584dc7f">Resume</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">возобновление потока.  <a href="#8175399e8cca4cbb8bde04ac4584dc7f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_infrastructure_1_1_thread.html#2b42f82341afd2747ea093b6ac8b91cb">Start</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">запуск потока.  <a href="#2b42f82341afd2747ea093b6ac8b91cb"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_infrastructure_1_1_thread.html#2b9c7abd14f9eef597e7df094f26ee1b">Stop</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">останов потока.  <a href="#2b9c7abd14f9eef597e7df094f26ee1b"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Закрытые статические члены</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_infrastructure_1_1_thread.html#b51b1a5c7f4c35638418ad925e0c6009">ExecuteInternal</a> (<a class="el" href="class_robot_war_1_1_infrastructure_1_1_thread.html">Thread</a> *)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">служебный метод выполнения потока. Используется для адаптации Win32API.  <a href="#b51b1a5c7f4c35638418ad925e0c6009"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Закрытые данные</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">HANDLE&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_infrastructure_1_1_thread.html#8b7bc94385477df7e73af882adcd7165">m_hThread</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">дескриптор потока.  <a href="#8b7bc94385477df7e73af882adcd7165"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_infrastructure_1_1_thread.html#8d7b8cc1444d026391c8edfc5d301343">m_ThreadRun</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">флаг, определяющий запущен поток или нет.  <a href="#8d7b8cc1444d026391c8edfc5d301343"></a><br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>Подробное описание</h2>
+Класс потока. Используется для организации потоковых объектов. <hr><h2>Конструктор(ы)</h2>
+<a class="anchor" name="3ad909f591333628c22cb5ba10957923"></a><!-- doxytag: member="RobotWar::Infrastructure::Thread::Thread" ref="3ad909f591333628c22cb5ba10957923" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Thread::Thread           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+конструктор класса. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="f1e25588ebe47a2a6d79ef8c686a992b"></a><!-- doxytag: member="RobotWar::Infrastructure::Thread::~Thread" ref="f1e25588ebe47a2a6d79ef8c686a992b" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Thread::~Thread           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+деструктор. 
+<p>
+
+</div>
+</div><p>
+<hr><h2>Методы</h2>
+<a class="anchor" name="469536d44ab5ca813b9fe1b7857a6fbf"></a><!-- doxytag: member="RobotWar::Infrastructure::Thread::Execute" ref="469536d44ab5ca813b9fe1b7857a6fbf" args="(void)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void RobotWar::Infrastructure::Thread::Execute           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+метод выполнения потока. 
+<p>
+
+<p>Замещается в <a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#dc95ab3a2d60360ba4f69206950951f1">RobotWar::Kernel::Kernel</a>, <a class="el" href="class_robot_war_1_1_robot_internal.html#0d20675e3aca2493c761973fdf1ae0f7">RobotWar::RobotInternal</a> и <a class="el" href="class_robot_war_1_1_kernel_1_1_talk_thread.html#dd9a8be8b24e4640ff6085d2e47250dc">RobotWar::Kernel::TalkThread</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="b51b1a5c7f4c35638418ad925e0c6009"></a><!-- doxytag: member="RobotWar::Infrastructure::Thread::ExecuteInternal" ref="b51b1a5c7f4c35638418ad925e0c6009" args="(Thread *)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Thread::ExecuteInternal           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_robot_war_1_1_infrastructure_1_1_thread.html">Thread</a> *&nbsp;</td>
+          <td class="paramname"> <em>instance</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static, private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+служебный метод выполнения потока. Используется для адаптации Win32API. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="8175399e8cca4cbb8bde04ac4584dc7f"></a><!-- doxytag: member="RobotWar::Infrastructure::Thread::Resume" ref="8175399e8cca4cbb8bde04ac4584dc7f" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Thread::Resume           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+возобновление потока. 
+<p>
+
+<p>Переопределяется в <a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#c02576b0c0466d14498fa0d58e5ada5f">RobotWar::Kernel::Kernel</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="2b42f82341afd2747ea093b6ac8b91cb"></a><!-- doxytag: member="RobotWar::Infrastructure::Thread::Start" ref="2b42f82341afd2747ea093b6ac8b91cb" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Thread::Start           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+запуск потока. 
+<p>
+
+<p>Переопределяется в <a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#0b3617e9621ee756b333bf35cf8ae9c2">RobotWar::Kernel::Kernel</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="2b9c7abd14f9eef597e7df094f26ee1b"></a><!-- doxytag: member="RobotWar::Infrastructure::Thread::Stop" ref="2b9c7abd14f9eef597e7df094f26ee1b" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Thread::Stop           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+останов потока. 
+<p>
+
+<p>Переопределяется в <a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#70d181c09ede65b8307483dcbb4a6cd5">RobotWar::Kernel::Kernel</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="107c735b49292fa76e2ae2225eee133e"></a><!-- doxytag: member="RobotWar::Infrastructure::Thread::Suspend" ref="107c735b49292fa76e2ae2225eee133e" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Thread::Suspend           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+приостановка потока. 
+<p>
+
+<p>Переопределяется в <a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#ae470f7cd04de90cc34c2c4493dc8043">RobotWar::Kernel::Kernel</a>.</p>
+
+</div>
+</div><p>
+<hr><h2>Данные класса</h2>
+<a class="anchor" name="8b7bc94385477df7e73af882adcd7165"></a><!-- doxytag: member="RobotWar::Infrastructure::Thread::m_hThread" ref="8b7bc94385477df7e73af882adcd7165" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HANDLE <a class="el" href="class_robot_war_1_1_infrastructure_1_1_thread.html#8b7bc94385477df7e73af882adcd7165">RobotWar::Infrastructure::Thread::m_hThread</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+дескриптор потока. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="8d7b8cc1444d026391c8edfc5d301343"></a><!-- doxytag: member="RobotWar::Infrastructure::Thread::m_ThreadRun" ref="8d7b8cc1444d026391c8edfc5d301343" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_robot_war_1_1_infrastructure_1_1_thread.html#8d7b8cc1444d026391c8edfc5d301343">RobotWar::Infrastructure::Thread::m_ThreadRun</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+флаг, определяющий запущен поток или нет. 
+<p>
+
+</div>
+</div><p>
+<hr>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="_thread_8h.html">Thread.h</a><li><a class="el" href="_thread_8cpp.html">Thread.cpp</a></ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Документация по RobotWar. Последние изменения: Mon Jan 12 00:07:12 2009. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
+</body>
+</html>

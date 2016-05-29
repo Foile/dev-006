@@ -1,0 +1,613 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>RobotWar: Класс RobotWar::Kernel::Kernel</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.5.7.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&nbsp;имен</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li><a href="classes.html"><span>Алфавитный&nbsp;указатель&nbsp;классов</span></a></li>
+      <li><a href="hierarchy.html"><span>Иерархия&nbsp;классов</span></a></li>
+      <li><a href="functions.html"><span>Члены&nbsp;классов</span></a></li>
+    </ul>
+  </div>
+  <div class="navpath"><a class="el" href="namespace_robot_war.html">RobotWar</a>::<a class="el" href="namespace_robot_war_1_1_kernel.html">Kernel</a>::<a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html">Kernel</a>
+  </div>
+</div>
+<div class="contents">
+<h1>Класс RobotWar::Kernel::Kernel</h1><!-- doxytag: class="RobotWar::Kernel::Kernel" --><!-- doxytag: inherits="RobotWar::IRobotOperation,RobotWar::Infrastructure::Thread" -->Класс, реализующий ядро игровой программы, работающей в отдельном потоке.  
+<a href="#_details">Подробнее...</a>
+<p>
+<code>#include &lt;Kernel.h&gt;</code>
+<p>
+<div class="dynheader">
+Граф наследования:RobotWar::Kernel::Kernel:</div>
+<div class="dynsection">
+
+<p><center><img src="class_robot_war_1_1_kernel_1_1_kernel.png" usemap="#RobotWar::Kernel::Kernel_map" border="0" alt=""></center>
+<map name="RobotWar::Kernel::Kernel_map">
+<area href="class_robot_war_1_1_i_robot_operation.html" alt="RobotWar::IRobotOperation" shape="rect" coords="0,0,195,24">
+<area href="class_robot_war_1_1_infrastructure_1_1_thread.html" alt="RobotWar::Infrastructure::Thread" shape="rect" coords="205,0,400,24">
+</map>
+</div>
+
+<p>
+<a href="class_robot_war_1_1_kernel_1_1_kernel-members.html">Полный список членов класса</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Открытые члены</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#e082d6d9ad28614d8b872d503da2eb5b">~Kernel</a> (void)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#4edd19769909e8e435f454ca37371d93">Move</a> (<a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *Sender, int x, int y)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#c99cd9bfb2514cbc0c26ad7b5a3a3cab">Fire</a> (<a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *Sender, int x, int y)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#4944db9c2ad33c22d9521094be11d887">LookAround</a> (<a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *Sender, int depth, int CountPoints, <a class="el" href="struct_robot_war_1_1_p_t.html">RobotWar::PT</a> *pPoints)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#3f4ad46c810a40fd54df437321eb1404">SendMsg</a> (<a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *Sender, char *RobotName, void *TalkData)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#dc95ab3a2d60360ba4f69206950951f1">Execute</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Метод выполнения потока ядраа.  <a href="#dc95ab3a2d60360ba4f69206950951f1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#0b3617e9621ee756b333bf35cf8ae9c2">Start</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Запуск потока ядра (Запуск игры).  <a href="#0b3617e9621ee756b333bf35cf8ae9c2"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#70d181c09ede65b8307483dcbb4a6cd5">Stop</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Останов потока ядра (Останов игры).  <a href="#70d181c09ede65b8307483dcbb4a6cd5"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#ae470f7cd04de90cc34c2c4493dc8043">Suspend</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Приостановка потока.  <a href="#ae470f7cd04de90cc34c2c4493dc8043"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#c02576b0c0466d14498fa0d58e5ada5f">Resume</a> (void)</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Возобновление потока.  <a href="#c02576b0c0466d14498fa0d58e5ada5f"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#b48f5c72174de56c7dd425140c985fca">AddRobot</a> (<a class="el" href="class_robot_war_1_1_robot_internal.html">RobotInternal</a> *Robot)</td></tr>
+
+<tr><td colspan="2"><br><h2>Открытые статические члены</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html">Kernel</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#48dba890afb589b2a954fb681bf64908">CreateKernel</a> (void)</td></tr>
+
+<tr><td colspan="2"><br><h2>Открытые атрибуты</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html">EventDelegate</a>&lt; <a class="el" href="class_robot_war_1_1_m_v_c_1_1_move_event.html">MoveEvent</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#31b5ea827c9dc34c8e4574b95b71e8e7">OnMove</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html">EventDelegate</a>&lt; <a class="el" href="class_robot_war_1_1_m_v_c_1_1_fire_event.html">FireEvent</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#fd7f6498ffca451008979a0c972d5af4">OnFire</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html">EventDelegate</a>&lt; <a class="el" href="class_robot_war_1_1_m_v_c_1_1_talk_event.html">TalkEvent</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#d2736666c16f310aa5f731aa4d85c5ef">OnTalk</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html">EventDelegate</a>&lt; <a class="el" href="class_robot_war_1_1_m_v_c_1_1_new_robot_event.html">NewRobotEvent</a> &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#3a716165914ab4d3107c1d3ad5ba0382">OnNewRobot</a></td></tr>
+
+<tr><td colspan="2"><br><h2>Закрытые члены</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#f5ed5aa776085d809e1850b25cec86cf">Kernel</a> (void)</td></tr>
+
+<tr><td colspan="2"><br><h2>Закрытые данные</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">map&lt; <a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *, <a class="el" href="class_robot_war_1_1_robot_internal.html">RobotInternal</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#68fdb4c09d31d342520463c75dea4784">m_GameMembersStorage</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Роботы, которые учавствуют в игре.  <a href="#68fdb4c09d31d342520463c75dea4784"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">vector&lt; <a class="el" href="class_robot_war_1_1_kernel_1_1_talk_thread.html">TalkThread</a> * &gt;&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#3df5ff06ec59217ef7949c93a01076e2">m_TalkThreadStorage</a></td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">список асинхронных сообщений, передаваемых между роботами.  <a href="#3df5ff06ec59217ef7949c93a01076e2"></a><br></td></tr>
+<tr><td colspan="2"><br><h2>Закрытые статические данные</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">static <a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html">Kernel</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#b2f9aa2a412fb44c69af07abf06eb233">m_Kernel</a> = NULL</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">указатель на ядро. Используется в паттерне Singleton.  <a href="#b2f9aa2a412fb44c69af07abf06eb233"></a><br></td></tr>
+</table>
+<hr><a name="_details"></a><h2>Подробное описание</h2>
+Класс, реализующий ядро игровой программы, работающей в отдельном потоке. <hr><h2>Конструктор(ы)</h2>
+<a class="anchor" name="f5ed5aa776085d809e1850b25cec86cf"></a><!-- doxytag: member="RobotWar::Kernel::Kernel::Kernel" ref="f5ed5aa776085d809e1850b25cec86cf" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html">Kernel::Kernel</a>           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [private]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="e082d6d9ad28614d8b872d503da2eb5b"></a><!-- doxytag: member="RobotWar::Kernel::Kernel::~Kernel" ref="e082d6d9ad28614d8b872d503da2eb5b" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Kernel::~Kernel           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<hr><h2>Методы</h2>
+<a class="anchor" name="b48f5c72174de56c7dd425140c985fca"></a><!-- doxytag: member="RobotWar::Kernel::Kernel::AddRobot" ref="b48f5c72174de56c7dd425140c985fca" args="(RobotInternal *Robot)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotWar::Kernel::Kernel::AddRobot           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_robot_war_1_1_robot_internal.html">RobotInternal</a> *&nbsp;</td>
+          <td class="paramname"> <em>Robot</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+добавляет робота как участника игры <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Robot</em>&nbsp;</td><td>- Указатель на добавляемого робота </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="48dba890afb589b2a954fb681bf64908"></a><!-- doxytag: member="RobotWar::Kernel::Kernel::CreateKernel" ref="48dba890afb589b2a954fb681bf64908" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html">Kernel</a> * RobotWar::Kernel::Kernel::CreateKernel           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="dc95ab3a2d60360ba4f69206950951f1"></a><!-- doxytag: member="RobotWar::Kernel::Kernel::Execute" ref="dc95ab3a2d60360ba4f69206950951f1" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotWar::Kernel::Kernel::Execute           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Метод выполнения потока ядраа. 
+<p>
+
+<p>Замещает <a class="el" href="class_robot_war_1_1_infrastructure_1_1_thread.html#469536d44ab5ca813b9fe1b7857a6fbf">RobotWar::Infrastructure::Thread</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="c99cd9bfb2514cbc0c26ad7b5a3a3cab"></a><!-- doxytag: member="RobotWar::Kernel::Kernel::Fire" ref="c99cd9bfb2514cbc0c26ad7b5a3a3cab" args="(IRobot *Sender, int x, int y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotWar::Kernel::Kernel::Fire           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *&nbsp;</td>
+          <td class="paramname"> <em>Sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>y</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Позволяет роботу произвести выстрел на указанное расстояние (не более 3) <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Sender</em>&nbsp;</td><td>- робот, который обращается к ядру </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>- координата по x (0&lt;=x&lt;3) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>- координата по y (0&lt;=y&lt;3) </td></tr>
+  </table>
+</dl>
+
+<p>Замещает <a class="el" href="class_robot_war_1_1_i_robot_operation.html#43f020c5e0ccf78847326240d8a653f0">RobotWar::IRobotOperation</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="4944db9c2ad33c22d9521094be11d887"></a><!-- doxytag: member="RobotWar::Kernel::Kernel::LookAround" ref="4944db9c2ad33c22d9521094be11d887" args="(IRobot *Sender, int depth, int CountPoints, RobotWar::PT *pPoints)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotWar::Kernel::Kernel::LookAround           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *&nbsp;</td>
+          <td class="paramname"> <em>Sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>depth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>CountPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_robot_war_1_1_p_t.html">RobotWar::PT</a> *&nbsp;</td>
+          <td class="paramname"> <em>pPoints</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+позволяет роботу получить информацию о существование других роботов в радиусе depth <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Sender</em>&nbsp;</td><td>- робот, который обращается к ядру. Следует указывать this </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>depth</em>&nbsp;</td><td>- глубина просмотра (0&lt;=depth&lt;3) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>CountPoints</em>&nbsp;</td><td>- количество элементов в буфере для заполнения массива координат </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>pPoints</em>&nbsp;</td><td>- массив структур <a class="el" href="struct_robot_war_1_1_p_t.html" title="Структура, хранящая координаты робота для метод...">PT</a> для заполнения координат, в которых есть объекты </td></tr>
+  </table>
+</dl>
+
+<p>Замещает <a class="el" href="class_robot_war_1_1_i_robot_operation.html#4690822b8b65948fc72ab617b283bed6">RobotWar::IRobotOperation</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="4edd19769909e8e435f454ca37371d93"></a><!-- doxytag: member="RobotWar::Kernel::Kernel::Move" ref="4edd19769909e8e435f454ca37371d93" args="(IRobot *Sender, int x, int y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotWar::Kernel::Kernel::Move           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *&nbsp;</td>
+          <td class="paramname"> <em>Sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>y</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Перемещает робота на указанное количество координат (не более 3) <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Sender</em>&nbsp;</td><td>- робот, который обращается к ядру </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>- координата по x (0&lt;=x&lt;3) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>- координата по y (0&lt;=y&lt;3) </td></tr>
+  </table>
+</dl>
+
+<p>Замещает <a class="el" href="class_robot_war_1_1_i_robot_operation.html#e0e67713964bdeea1c909ccf630a3b95">RobotWar::IRobotOperation</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="c02576b0c0466d14498fa0d58e5ada5f"></a><!-- doxytag: member="RobotWar::Kernel::Kernel::Resume" ref="c02576b0c0466d14498fa0d58e5ada5f" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotWar::Kernel::Kernel::Resume           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Возобновление потока. 
+<p>
+
+<p>Переопределяет метод предка <a class="el" href="class_robot_war_1_1_infrastructure_1_1_thread.html#8175399e8cca4cbb8bde04ac4584dc7f">RobotWar::Infrastructure::Thread</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="3f4ad46c810a40fd54df437321eb1404"></a><!-- doxytag: member="RobotWar::Kernel::Kernel::SendMsg" ref="3f4ad46c810a40fd54df437321eb1404" args="(IRobot *Sender, char *RobotName, void *TalkData)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotWar::Kernel::Kernel::SendMsg           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a> *&nbsp;</td>
+          <td class="paramname"> <em>Sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>RobotName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&nbsp;</td>
+          <td class="paramname"> <em>TalkData</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+позволяет роботу отправить сообщение другому роботу <dl compact><dt><b>Аргументы:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>Sender</em>&nbsp;</td><td>- робот, который обращается к ядру </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>RobotName</em>&nbsp;</td><td>- строка, содержащая имя робота, которому пересылается сообщение </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>TalkData</em>&nbsp;</td><td>- буфер, содержащий передаваемые другому роботу данные </td></tr>
+  </table>
+</dl>
+
+<p>Замещает <a class="el" href="class_robot_war_1_1_i_robot_operation.html#2e45bc34839aa1d241eb5996306b9442">RobotWar::IRobotOperation</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="0b3617e9621ee756b333bf35cf8ae9c2"></a><!-- doxytag: member="RobotWar::Kernel::Kernel::Start" ref="0b3617e9621ee756b333bf35cf8ae9c2" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotWar::Kernel::Kernel::Start           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Запуск потока ядра (Запуск игры). 
+<p>
+
+<p>Переопределяет метод предка <a class="el" href="class_robot_war_1_1_infrastructure_1_1_thread.html#2b42f82341afd2747ea093b6ac8b91cb">RobotWar::Infrastructure::Thread</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="70d181c09ede65b8307483dcbb4a6cd5"></a><!-- doxytag: member="RobotWar::Kernel::Kernel::Stop" ref="70d181c09ede65b8307483dcbb4a6cd5" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotWar::Kernel::Kernel::Stop           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Останов потока ядра (Останов игры). 
+<p>
+
+<p>Переопределяет метод предка <a class="el" href="class_robot_war_1_1_infrastructure_1_1_thread.html#2b9c7abd14f9eef597e7df094f26ee1b">RobotWar::Infrastructure::Thread</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="ae470f7cd04de90cc34c2c4493dc8043"></a><!-- doxytag: member="RobotWar::Kernel::Kernel::Suspend" ref="ae470f7cd04de90cc34c2c4493dc8043" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RobotWar::Kernel::Kernel::Suspend           </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Приостановка потока. 
+<p>
+
+<p>Переопределяет метод предка <a class="el" href="class_robot_war_1_1_infrastructure_1_1_thread.html#107c735b49292fa76e2ae2225eee133e">RobotWar::Infrastructure::Thread</a>.</p>
+
+</div>
+</div><p>
+<hr><h2>Данные класса</h2>
+<a class="anchor" name="68fdb4c09d31d342520463c75dea4784"></a><!-- doxytag: member="RobotWar::Kernel::Kernel::m_GameMembersStorage" ref="68fdb4c09d31d342520463c75dea4784" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">map&lt;<a class="el" href="class_robot_war_1_1_i_robot.html">IRobot</a>*,<a class="el" href="class_robot_war_1_1_robot_internal.html">RobotInternal</a>*&gt; <a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#68fdb4c09d31d342520463c75dea4784">RobotWar::Kernel::Kernel::m_GameMembersStorage</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Роботы, которые учавствуют в игре. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="b2f9aa2a412fb44c69af07abf06eb233"></a><!-- doxytag: member="RobotWar::Kernel::Kernel::m_Kernel" ref="b2f9aa2a412fb44c69af07abf06eb233" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html">Kernel</a> * <a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#b2f9aa2a412fb44c69af07abf06eb233">Kernel::m_Kernel</a> = NULL<code> [static, private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+указатель на ядро. Используется в паттерне Singleton. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="3df5ff06ec59217ef7949c93a01076e2"></a><!-- doxytag: member="RobotWar::Kernel::Kernel::m_TalkThreadStorage" ref="3df5ff06ec59217ef7949c93a01076e2" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;<a class="el" href="class_robot_war_1_1_kernel_1_1_talk_thread.html">TalkThread</a>*&gt; <a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#3df5ff06ec59217ef7949c93a01076e2">RobotWar::Kernel::Kernel::m_TalkThreadStorage</a><code> [private]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+список асинхронных сообщений, передаваемых между роботами. 
+<p>
+
+</div>
+</div><p>
+<a class="anchor" name="fd7f6498ffca451008979a0c972d5af4"></a><!-- doxytag: member="RobotWar::Kernel::Kernel::OnFire" ref="fd7f6498ffca451008979a0c972d5af4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html">EventDelegate</a>&lt;<a class="el" href="class_robot_war_1_1_m_v_c_1_1_fire_event.html">FireEvent</a>&gt; <a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#fd7f6498ffca451008979a0c972d5af4">RobotWar::Kernel::Kernel::OnFire</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+многоадресный указатель-делегат на событие OnMove. Данное событие вызывается при при выстреле любого робота 
+</div>
+</div><p>
+<a class="anchor" name="31b5ea827c9dc34c8e4574b95b71e8e7"></a><!-- doxytag: member="RobotWar::Kernel::Kernel::OnMove" ref="31b5ea827c9dc34c8e4574b95b71e8e7" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html">EventDelegate</a>&lt;<a class="el" href="class_robot_war_1_1_m_v_c_1_1_move_event.html">MoveEvent</a>&gt; <a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#31b5ea827c9dc34c8e4574b95b71e8e7">RobotWar::Kernel::Kernel::OnMove</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+многоадресный указатель-делегат на событие OnMove. Данное событие вызывается при перемещении любого робота 
+</div>
+</div><p>
+<a class="anchor" name="3a716165914ab4d3107c1d3ad5ba0382"></a><!-- doxytag: member="RobotWar::Kernel::Kernel::OnNewRobot" ref="3a716165914ab4d3107c1d3ad5ba0382" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html">EventDelegate</a>&lt;<a class="el" href="class_robot_war_1_1_m_v_c_1_1_new_robot_event.html">NewRobotEvent</a>&gt; <a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#3a716165914ab4d3107c1d3ad5ba0382">RobotWar::Kernel::Kernel::OnNewRobot</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+многоадресный указатель-делегат на событие OnTalk. Данное событие вызывается при добавлении нового робота в игру 
+</div>
+</div><p>
+<a class="anchor" name="d2736666c16f310aa5f731aa4d85c5ef"></a><!-- doxytag: member="RobotWar::Kernel::Kernel::OnTalk" ref="d2736666c16f310aa5f731aa4d85c5ef" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html">EventDelegate</a>&lt;<a class="el" href="class_robot_war_1_1_m_v_c_1_1_talk_event.html">TalkEvent</a>&gt; <a class="el" href="class_robot_war_1_1_kernel_1_1_kernel.html#d2736666c16f310aa5f731aa4d85c5ef">RobotWar::Kernel::Kernel::OnTalk</a>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+многоадресный указатель-делегат на событие OnFire. Данное событие вызывается при передаче между роботами сообщения 
+</div>
+</div><p>
+<hr>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="_kernel_8h.html">Kernel.h</a><li><a class="el" href="_kernel_8cpp.html">Kernel.cpp</a></ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Документация по RobotWar. Последние изменения: Mon Jan 12 00:07:12 2009. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>RobotWar: Исходный файл D:/Development/SoftEngineering/Pavlin-Co/cppRoboGame/CppRobotWars/CppRobotWars/OpenFileDialog.cpp</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.5.7.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&nbsp;имен</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&nbsp;членов&nbsp;всех&nbsp;файлов</span></a></li>
+    </ul>
+  </div>
+<h1>D:/Development/SoftEngineering/Pavlin-Co/cppRoboGame/CppRobotWars/CppRobotWars/OpenFileDialog.cpp</h1><a href="_open_file_dialog_8cpp.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include "<a class="code" href="_open_file_dialog_8h.html">OpenFileDialog.h</a>"</span>
+<a name="l00002"></a>00002 
+<a name="l00003"></a><a class="code" href="class_open_file_dialog.html#d9a9a77705d7857602c67a344230ed91">00003</a> <a class="code" href="class_open_file_dialog.html#d9a9a77705d7857602c67a344230ed91">OpenFileDialog::OpenFileDialog</a>(HWND owner)
+<a name="l00004"></a>00004 {
+<a name="l00005"></a>00005         
+<a name="l00006"></a>00006                 <a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>.lStructSize = <span class="keyword">sizeof</span>(<a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>);
+<a name="l00007"></a>00007                 <a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>.hwndOwner = owner;
+<a name="l00008"></a>00008                 <a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>.hInstance=0;
+<a name="l00009"></a>00009                 <a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>.lpstrFilter = <span class="stringliteral">"DLL Robot Files\0*.dll\0ALL files you wanted\0*.*\0"</span>;
+<a name="l00010"></a>00010                 <a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>.lpstrCustomFilter =0;
+<a name="l00011"></a>00011                 <a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>.nMaxCustFilter=0;
+<a name="l00012"></a>00012                 <a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>.nFilterIndex=1;
+<a name="l00013"></a>00013                 <a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>.lpstrFile=<a class="code" href="class_open_file_dialog.html#468b3965c639457bb31e753f48c7ac9a">_bufferForFileEditControl</a>;
+<a name="l00014"></a>00014                 <a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>.lpstrFile[0] = <span class="charliteral">'\0'</span>;
+<a name="l00015"></a>00015                 <a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>.nMaxFile=<a class="code" href="_open_file_dialog_8h.html#6789ebc0df71a8ef76bfbb4fb5f74aad">MAX_STRING_LENGTH</a>;
+<a name="l00016"></a>00016                 <a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>.lpstrFileTitle = <a class="code" href="class_open_file_dialog.html#537a62d46947f9d93498476005ae1285">_bufferForFileName</a>;
+<a name="l00017"></a>00017                 <a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>.lpstrFileTitle[0] = <span class="charliteral">'\0'</span>;
+<a name="l00018"></a>00018                 <a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>.nMaxFileTitle = <a class="code" href="_open_file_dialog_8h.html#6789ebc0df71a8ef76bfbb4fb5f74aad">MAX_STRING_LENGTH</a>;
+<a name="l00019"></a>00019                 <a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>.lpstrInitialDir=NULL;
+<a name="l00020"></a>00020                 <a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>.lpstrTitle = <span class="stringliteral">"Please, load robot's *.dll algorithm file!!!"</span>;
+<a name="l00021"></a>00021                 <a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>.Flags = OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST | OFN_EXPLORER | OFN_ENABLESIZING | OFN_SHAREAWARE;
+<a name="l00022"></a>00022                 <a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>.lpstrDefExt = <span class="stringliteral">"dll"</span>;
+<a name="l00023"></a>00023                 <a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>.pvReserved = NULL;
+<a name="l00024"></a>00024                 <a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>.dwReserved = 0;
+<a name="l00025"></a>00025                 <a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>.FlagsEx = 0;
+<a name="l00026"></a>00026 }
+<a name="l00027"></a><a class="code" href="class_open_file_dialog.html#c5a91bfc72f0a2e593c624b670e641e1">00027</a> <span class="keywordtype">char</span>* <a class="code" href="class_open_file_dialog.html#c5a91bfc72f0a2e593c624b670e641e1">OpenFileDialog::getFileName</a>()
+<a name="l00028"></a>00028 {
+<a name="l00029"></a>00029                 <span class="keywordflow">return</span> <a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>.lpstrFile;
+<a name="l00030"></a>00030 }
+<a name="l00031"></a><a class="code" href="class_open_file_dialog.html#a94e3d4f20c2a6446dcdbc22b13da1b4">00031</a> <span class="keywordtype">char</span>* <a class="code" href="class_open_file_dialog.html#a94e3d4f20c2a6446dcdbc22b13da1b4">OpenFileDialog::getOnlyFileName</a>()
+<a name="l00032"></a>00032 {
+<a name="l00033"></a>00033                 <span class="keywordflow">return</span> <a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>.lpstrFileTitle;
+<a name="l00034"></a>00034 }
+<a name="l00035"></a><a class="code" href="class_open_file_dialog.html#a6a6ba92044f6c694fbc35b71f84eb72">00035</a> <span class="keywordtype">void</span> <a class="code" href="class_open_file_dialog.html#a6a6ba92044f6c694fbc35b71f84eb72">OpenFileDialog::setFilter</a>(<span class="keywordtype">char</span>* filter)
+<a name="l00036"></a>00036 {
+<a name="l00037"></a>00037                 <span class="keywordtype">bool</span> notFindTwoZero = <span class="keyword">true</span>;
+<a name="l00038"></a>00038                 <span class="keywordtype">bool</span> findOneZero = <span class="keyword">false</span>;
+<a name="l00039"></a>00039                 <span class="keywordtype">int</span> i=0;
+<a name="l00040"></a>00040                 <span class="keywordflow">while</span> (notFindTwoZero)
+<a name="l00041"></a>00041                 {
+<a name="l00042"></a>00042                         <a class="code" href="class_open_file_dialog.html#addd566abcd49aeff33fb92211b13358">_filter</a>[i]=filter[i];
+<a name="l00043"></a>00043                         <span class="keywordflow">if</span> (<a class="code" href="class_open_file_dialog.html#addd566abcd49aeff33fb92211b13358">_filter</a>[i]==<span class="charliteral">'\0'</span>)
+<a name="l00044"></a>00044                         {
+<a name="l00045"></a>00045                                 <span class="keywordflow">if</span> (findOneZero)
+<a name="l00046"></a>00046                                         notFindTwoZero = <span class="keyword">false</span>;
+<a name="l00047"></a>00047                                 findOneZero = <span class="keyword">true</span>;
+<a name="l00048"></a>00048                         }
+<a name="l00049"></a>00049                         <span class="keywordflow">else</span>
+<a name="l00050"></a>00050                                 findOneZero = <span class="keyword">false</span>;
+<a name="l00051"></a>00051                         
+<a name="l00052"></a>00052                         i++;                    
+<a name="l00053"></a>00053                 }
+<a name="l00054"></a>00054                 <a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>.lpstrFilter = <a class="code" href="class_open_file_dialog.html#addd566abcd49aeff33fb92211b13358">_filter</a>;
+<a name="l00055"></a>00055 }
+<a name="l00056"></a><a class="code" href="class_open_file_dialog.html#ef9ad39ccc2f456ae482e7dbab2eac2b">00056</a> <span class="keywordtype">bool</span> <a class="code" href="class_open_file_dialog.html#ef9ad39ccc2f456ae482e7dbab2eac2b">OpenFileDialog::show</a>()
+<a name="l00057"></a>00057 {
+<a name="l00058"></a>00058                 <span class="keywordflow">return</span> GetOpenFileName(&amp;<a class="code" href="class_open_file_dialog.html#e8436f2e2554ac1572e85bd6bf2098a1">_filename</a>) != 0;
+<a name="l00059"></a>00059 }
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Документация по RobotWar. Последние изменения: Fri Jan 9 13:33:54 2009. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
+</body>
+</html>

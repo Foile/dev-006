@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>RobotWar: Исходный файл D:/Development/SoftEngineering/Pavlin-Co/cppRoboGame/CppRobotWars/CppRobotWars/main.cpp</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.5.7.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&nbsp;имен</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&nbsp;членов&nbsp;всех&nbsp;файлов</span></a></li>
+    </ul>
+  </div>
+<h1>D:/Development/SoftEngineering/Pavlin-Co/cppRoboGame/CppRobotWars/CppRobotWars/main.cpp</h1><a href="main_8cpp.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &lt;windows.h&gt;</span>
+<a name="l00002"></a>00002 <span class="preprocessor">#include &lt;vector&gt;</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include "<a class="code" href="resource_8h.html">resource.h</a>"</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include "<a class="code" href="_open_file_dialog_8h.html">openfiledialog.h</a>"</span>
+<a name="l00005"></a>00005 <span class="preprocessor">#include "<a class="code" href="_sample_view_8h.html">sampleview.h</a>"</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#include "<a class="code" href="_kernel_8h.html">kernel.h</a>"</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include "<a class="code" href="_dll_helper_8h.html">dllhelper.h</a>"</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include "<a class="code" href="_robot_internal_8h.html">robotinternal.h</a>"</span>
+<a name="l00009"></a>00009 
+<a name="l00010"></a><a class="code" href="main_8cpp.html#de196ed1ca1f65b7616dcc6025dd8b2a">00010</a> <a class="code" href="class_sample_view.html">SampleView</a> *<a class="code" href="main_8cpp.html#de196ed1ca1f65b7616dcc6025dd8b2a">pView</a> = NULL;
+<a name="l00011"></a>00011 
+<a name="l00012"></a>00012 <span class="keyword">using namespace </span>RobotWar;
+<a name="l00013"></a>00013 <span class="keyword">using namespace </span>RobotWar::Infrastructure;
+<a name="l00014"></a>00014 
+<a name="l00015"></a><a class="code" href="main_8cpp.html#f51a5a38aaa0226667462a247a1bccad">00015</a> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html">RobotWar::Kernel::Kernel</a> *<a class="code" href="main_8cpp.html#f51a5a38aaa0226667462a247a1bccad">pKernel</a> = NULL;
+<a name="l00016"></a>00016 
+<a name="l00017"></a><a class="code" href="main_8cpp.html#042257232597cd5614fc7d66e936ea68">00017</a> vector&lt;DllHelper*&gt; <a class="code" href="main_8cpp.html#042257232597cd5614fc7d66e936ea68">DllStorage</a>;
+<a name="l00018"></a>00018 
+<a name="l00019"></a><a class="code" href="main_8cpp.html#f81ad1db349dbe5b2eda8496bddc46c7">00019</a> LRESULT CALLBACK <a class="code" href="main_8cpp.html#f81ad1db349dbe5b2eda8496bddc46c7">HandleEvent</a>(HWND hWnd,UINT message, WPARAM wParam, LPARAM lParam)
+<a name="l00020"></a>00020 {
+<a name="l00021"></a>00021         <span class="keywordflow">switch</span>(message)
+<a name="l00022"></a>00022         {
+<a name="l00023"></a>00023         <span class="keywordflow">case</span> WM_CREATE:
+<a name="l00024"></a>00024                 pView = <span class="keyword">new</span> <a class="code" href="class_sample_view.html">SampleView</a>(hWnd);
+<a name="l00025"></a>00025                 pKernel = <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#48dba890afb589b2a954fb681bf64908">RobotWar::Kernel::Kernel::CreateKernel</a>();
+<a name="l00026"></a>00026                 pKernel-&gt;<a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#d2736666c16f310aa5f731aa4d85c5ef">OnTalk</a>.Attach(pView);
+<a name="l00027"></a>00027                 pKernel-&gt;<a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#31b5ea827c9dc34c8e4574b95b71e8e7">OnMove</a>.Attach(pView);
+<a name="l00028"></a>00028                 pKernel-&gt;<a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#3a716165914ab4d3107c1d3ad5ba0382">OnNewRobot</a>.Attach(pView);
+<a name="l00029"></a>00029                 <span class="keywordflow">return</span> 0;
+<a name="l00030"></a>00030         <span class="keywordflow">case</span> WM_DESTROY:
+<a name="l00031"></a>00031                 <span class="keywordflow">if</span>(pView) <span class="keyword">delete</span> pView;
+<a name="l00032"></a>00032                 PostQuitMessage(0);
+<a name="l00033"></a>00033                 <span class="keywordflow">return</span> 0;
+<a name="l00034"></a>00034         <span class="keywordflow">case</span> WM_COMMAND:
+<a name="l00035"></a>00035                 {
+<a name="l00036"></a>00036                         <span class="keywordflow">switch</span>(LOWORD(wParam))
+<a name="l00037"></a>00037                         {
+<a name="l00038"></a>00038                         <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#344628594f07fdbf8e8a8780f1bc6bb0">ID_LOADROBOT</a>:
+<a name="l00039"></a>00039                                 {
+<a name="l00040"></a>00040                                  <a class="code" href="class_open_file_dialog.html">OpenFileDialog</a> dlg(hWnd);
+<a name="l00041"></a>00041                                  <span class="keywordflow">if</span>(!dlg.<a class="code" href="class_open_file_dialog.html#ef9ad39ccc2f456ae482e7dbab2eac2b">show</a>()) <span class="keywordflow">return</span> 0;
+<a name="l00042"></a>00042                                   <a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html">DllHelper</a> *pDll = <span class="keyword">new</span> <a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html">DllHelper</a>(dlg.<a class="code" href="class_open_file_dialog.html#c5a91bfc72f0a2e593c624b670e641e1">getFileName</a>());
+<a name="l00043"></a>00043                                   <a class="code" href="main_8cpp.html#042257232597cd5614fc7d66e936ea68">DllStorage</a>.push_back(pDll);
+<a name="l00044"></a>00044                                   <a class="code" href="class_robot_war_1_1_i_robot.html">IRobot</a> *robot = (<a class="code" href="class_robot_war_1_1_i_robot.html">IRobot</a>*)pDll-&gt;<a class="code" href="class_robot_war_1_1_infrastructure_1_1_dll_helper.html#23abf4dcc958e5ccbd2da344cce066a4">CreateInstance</a>(<span class="stringliteral">"Robot"</span>);
+<a name="l00045"></a>00045                                   <a class="code" href="class_robot_war_1_1_robot_internal.html">RobotInternal</a> *pRobotInternal = <span class="keyword">new</span> <a class="code" href="class_robot_war_1_1_robot_internal.html">RobotInternal</a>(robot,pKernel);
+<a name="l00046"></a>00046                                   pKernel-&gt;<a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#b48f5c72174de56c7dd425140c985fca">AddRobot</a>(pRobotInternal);
+<a name="l00047"></a>00047                                  <span class="keywordflow">return</span> 0;
+<a name="l00048"></a>00048                                 }
+<a name="l00049"></a>00049                         <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#7d4978a3e7e977854340982f9b95de0e">ID_RUNGAME</a>:
+<a name="l00050"></a>00050                                 {
+<a name="l00051"></a>00051                                         pKernel-&gt;<a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#0b3617e9621ee756b333bf35cf8ae9c2" title="Запуск потока ядра (Запуск игры).">Start</a>();
+<a name="l00052"></a>00052                                         <span class="keywordflow">return</span> 0;
+<a name="l00053"></a>00053                                 }
+<a name="l00054"></a>00054                         <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#bf862604324f2a825340b6e28b3b34c2">ID_QUIT</a>:
+<a name="l00055"></a>00055                                 {
+<a name="l00056"></a>00056                                         PostQuitMessage(0);
+<a name="l00057"></a>00057                                         <span class="keywordflow">return</span> 0;
+<a name="l00058"></a>00058                                 }
+<a name="l00059"></a>00059                         }
+<a name="l00060"></a>00060                 }
+<a name="l00061"></a>00061         }
+<a name="l00062"></a>00062         <span class="keywordflow">return</span> DefWindowProc(hWnd,message,wParam,lParam);
+<a name="l00063"></a>00063 }
+<a name="l00064"></a>00064 
+<a name="l00065"></a><a class="code" href="main_8cpp.html#6be47ecdf51b4ce9660172fc6d367a5e">00065</a> <span class="keywordtype">int</span> WINAPI <a class="code" href="main_8cpp.html#6be47ecdf51b4ce9660172fc6d367a5e">WinMain</a>(HINSTANCE hInstance,HINSTANCE,LPSTR,<span class="keywordtype">int</span> nCmdShow)
+<a name="l00066"></a>00066 {
+<a name="l00067"></a>00067         WNDCLASSEX wc = {0};
+<a name="l00068"></a>00068         wc.cbSize = <span class="keyword">sizeof</span>(WNDCLASSEX);
+<a name="l00069"></a>00069         wc.cbClsExtra = wc.cbWndExtra = 0;
+<a name="l00070"></a>00070         wc.hbrBackground = (HBRUSH)GetStockObject(WHITE_BRUSH);
+<a name="l00071"></a>00071         wc.hCursor = LoadCursor(NULL,IDC_ARROW);
+<a name="l00072"></a>00072         wc.hIconSm = wc.hIcon = LoadIcon(hInstance,MAKEINTRESOURCE(<a class="code" href="resource_8h.html#a67df787332945a4660cf459ad434291">IDI_MAIN</a>));
+<a name="l00073"></a>00073         wc.hInstance = hInstance;
+<a name="l00074"></a>00074         wc.lpfnWndProc = <a class="code" href="main_8cpp.html#f81ad1db349dbe5b2eda8496bddc46c7">HandleEvent</a>;
+<a name="l00075"></a>00075         wc.lpszMenuName = MAKEINTRESOURCE(<a class="code" href="resource_8h.html#30e731e062465647bdebf473dd1f72b4">IDR_MAIN</a>);
+<a name="l00076"></a>00076         wc.style = CS_OWNDC;
+<a name="l00077"></a>00077         wc.lpszClassName = <span class="stringliteral">"ROBOT::MAIN"</span>;
+<a name="l00078"></a>00078 
+<a name="l00079"></a>00079         <span class="keywordflow">if</span>(!RegisterClassEx(&amp;wc)) <span class="keywordflow">return</span> 1;
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081         HWND hWndMain = CreateWindow(<span class="stringliteral">"ROBOT::MAIN"</span>,<span class="stringliteral">"Битва роботов. Многопоточная редакция 1.0"</span>,
+<a name="l00082"></a>00082                 WS_OVERLAPPEDWINDOW, CW_USEDEFAULT,CW_USEDEFAULT,CW_USEDEFAULT,CW_USEDEFAULT,
+<a name="l00083"></a>00083                 HWND_DESKTOP, NULL,hInstance, NULL);
+<a name="l00084"></a>00084         ShowWindow(hWndMain,nCmdShow);
+<a name="l00085"></a>00085 
+<a name="l00086"></a>00086         MSG msg;
+<a name="l00087"></a>00087         <span class="keywordflow">while</span>(GetMessage(&amp;msg,0,0,0))
+<a name="l00088"></a>00088                 DispatchMessage(&amp;msg);
+<a name="l00089"></a>00089         <span class="keywordflow">return</span> msg.wParam;
+<a name="l00090"></a>00090 
+<a name="l00091"></a>00091 }
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Документация по RobotWar. Последние изменения: Fri Jan 9 13:33:54 2009. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
+</body>
+</html>

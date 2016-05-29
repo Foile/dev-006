@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>RobotWar: Исходный файл D:/Development/SoftEngineering/Pavlin-Co/cppRoboGame/CppRobotWars/CppRobotWars/EventDelegate.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.5.7.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&nbsp;имен</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&nbsp;членов&nbsp;всех&nbsp;файлов</span></a></li>
+    </ul>
+  </div>
+<h1>D:/Development/SoftEngineering/Pavlin-Co/cppRoboGame/CppRobotWars/CppRobotWars/EventDelegate.h</h1><a href="_event_delegate_8h.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#pragma once</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#include "<a class="code" href="_i_mvc_8h.html">imvc.h</a>"</span>
+<a name="l00003"></a>00003 <span class="preprocessor">#include "<a class="code" href="_robot_internal_8h.html">robotinternal.h</a>"</span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include &lt;list&gt;</span>
+<a name="l00005"></a>00005 
+<a name="l00006"></a>00006 <span class="keyword">using namespace </span>std;
+<a name="l00007"></a>00007 
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="keyword">namespace </span>RobotWar
+<a name="l00010"></a>00010 {
+<a name="l00011"></a><a class="code" href="namespace_robot_war_1_1_m_v_c.html">00011</a>         <span class="keyword">namespace </span>MVC
+<a name="l00012"></a>00012         {
+<a name="l00017"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html">00017</a>                 <span class="keyword">class </span><a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html">Event</a>
+<a name="l00018"></a>00018                 {
+<a name="l00019"></a>00019                 <span class="keyword">private</span>:
+<a name="l00021"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html#d06a6d7ca1627515371e7064deb6ede5">00021</a>                         <a class="code" href="class_robot_war_1_1_robot_internal.html">RobotWar::RobotInternal</a>  *  <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html#d06a6d7ca1627515371e7064deb6ede5" title="Указатель на робота, который является источником...">m_SenderRobot</a>;
+<a name="l00022"></a>00022                 <span class="keyword">public</span>:
+<a name="l00025"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html#82c1649a80c095f494891be80b03f513">00025</a>                         <a class="code" href="class_robot_war_1_1_robot_internal.html">RobotWar::RobotInternal</a>*  <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html#82c1649a80c095f494891be80b03f513">GetSender</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html#d06a6d7ca1627515371e7064deb6ede5" title="Указатель на робота, который является источником...">m_SenderRobot</a>;}
+<a name="l00027"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html#d6163e0ae8f9d53cb3272b53d8aec047">00027</a>                         <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html#d6163e0ae8f9d53cb3272b53d8aec047" title="конструктор по умолчанию.">Event</a>() : <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html#d06a6d7ca1627515371e7064deb6ede5" title="Указатель на робота, который является источником...">m_SenderRobot</a>(NULL) {}
+<a name="l00030"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html#88b848f8bc282876b0e8fe87e34a79b1">00030</a>                         <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html#88b848f8bc282876b0e8fe87e34a79b1">Event</a>(<a class="code" href="class_robot_war_1_1_robot_internal.html">RobotInternal</a> *Sender) : <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html#d06a6d7ca1627515371e7064deb6ede5" title="Указатель на робота, который является источником...">m_SenderRobot</a>(Sender) {}
+<a name="l00031"></a>00031                 };
+<a name="l00035"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_move_event.html">00035</a>                 <span class="keyword">class </span><a class="code" href="class_robot_war_1_1_m_v_c_1_1_move_event.html">MoveEvent</a> : <span class="keyword">public</span> <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html">Event</a> 
+<a name="l00036"></a>00036                 {
+<a name="l00037"></a>00037                 <span class="keyword">private</span>:
+<a name="l00039"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_move_event.html#ddac872d092d53d484639224de0760e3">00039</a>                         <span class="keywordtype">int</span> <a class="code" href="class_robot_war_1_1_m_v_c_1_1_move_event.html#ddac872d092d53d484639224de0760e3" title="старая координата x (до перемещения робота).">m_OldX</a>;
+<a name="l00041"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_move_event.html#9c6f69181e5a39becc9c14fc7303783c">00041</a>                         <span class="keywordtype">int</span> <a class="code" href="class_robot_war_1_1_m_v_c_1_1_move_event.html#9c6f69181e5a39becc9c14fc7303783c" title="старая координата y (до перемешения робота).">m_OldY</a>;
+<a name="l00042"></a>00042                 <span class="keyword">public</span>:
+<a name="l00044"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_move_event.html#afaa10b2a65d0e287a5a6500aec70c78">00044</a>                         <span class="keywordtype">int</span> <a class="code" href="class_robot_war_1_1_m_v_c_1_1_move_event.html#afaa10b2a65d0e287a5a6500aec70c78" title="получение старой координаты x.">GetOldX</a>() { <span class="keywordflow">return</span> <a class="code" href="class_robot_war_1_1_m_v_c_1_1_move_event.html#ddac872d092d53d484639224de0760e3" title="старая координата x (до перемещения робота).">m_OldX</a>; }
+<a name="l00046"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_move_event.html#fbfb8cd61b2917c8384e88e3f11ac09e">00046</a>                         <span class="keywordtype">int</span> <a class="code" href="class_robot_war_1_1_m_v_c_1_1_move_event.html#fbfb8cd61b2917c8384e88e3f11ac09e" title="получение старой координты y.">GetOldY</a>() { <span class="keywordflow">return</span> <a class="code" href="class_robot_war_1_1_m_v_c_1_1_move_event.html#9c6f69181e5a39becc9c14fc7303783c" title="старая координата y (до перемешения робота).">m_OldY</a>; }
+<a name="l00051"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_move_event.html#8a88fd37f8d7a81ce845e73ffa4e4ad8">00051</a>                         <a class="code" href="class_robot_war_1_1_m_v_c_1_1_move_event.html#8a88fd37f8d7a81ce845e73ffa4e4ad8">MoveEvent</a>(<a class="code" href="class_robot_war_1_1_robot_internal.html">RobotInternal</a> *Sender,<span class="keywordtype">int</span> OldX,<span class="keywordtype">int</span> OldY) : <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html">Event</a>(Sender),<a class="code" href="class_robot_war_1_1_m_v_c_1_1_move_event.html#ddac872d092d53d484639224de0760e3" title="старая координата x (до перемещения робота).">m_OldX</a>(OldX),
+<a name="l00052"></a>00052                         <a class="code" href="class_robot_war_1_1_m_v_c_1_1_move_event.html#9c6f69181e5a39becc9c14fc7303783c" title="старая координата y (до перемешения робота).">m_OldY</a>(OldY) {}
+<a name="l00053"></a>00053                 };
+<a name="l00054"></a>00054 
+<a name="l00058"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_talk_event.html">00058</a>                 <span class="keyword">class </span><a class="code" href="class_robot_war_1_1_m_v_c_1_1_talk_event.html">TalkEvent</a> : <span class="keyword">public</span> <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html">Event</a>
+<a name="l00059"></a>00059                 {
+<a name="l00060"></a>00060                 <span class="keyword">public</span>:
+<a name="l00061"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_talk_event.html#0a1108576c3cd2183f7c05c142e03e77">00061</a>                         <a class="code" href="class_robot_war_1_1_m_v_c_1_1_talk_event.html#0a1108576c3cd2183f7c05c142e03e77">TalkEvent</a>(<a class="code" href="class_robot_war_1_1_robot_internal.html">RobotInternal</a> *Sender) : <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html">Event</a>(Sender) {}
+<a name="l00062"></a>00062                 };
+<a name="l00066"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_fire_event.html">00066</a>                 <span class="keyword">class </span><a class="code" href="class_robot_war_1_1_m_v_c_1_1_fire_event.html">FireEvent</a> : <span class="keyword">public</span> <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html">Event</a>
+<a name="l00067"></a>00067                 {
+<a name="l00068"></a>00068                 <span class="keyword">private</span>:
+<a name="l00070"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_fire_event.html#12cf7ad298a2e01be3bde9281b3b7389">00070</a>                         <a class="code" href="class_robot_war_1_1_robot_internal.html">RobotInternal</a> *<a class="code" href="class_robot_war_1_1_m_v_c_1_1_fire_event.html#12cf7ad298a2e01be3bde9281b3b7389" title="Указатель на уничтоженного робота.">m_KilledRobot</a>;
+<a name="l00071"></a>00071                 <span class="keyword">public</span>:
+<a name="l00074"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_fire_event.html#d4bfba85bb6e41e9b54a0b08bd77c20d">00074</a>                         <span class="keywordtype">bool</span> <a class="code" href="class_robot_war_1_1_m_v_c_1_1_fire_event.html#d4bfba85bb6e41e9b54a0b08bd77c20d">GetSuccess</a>() { <span class="keywordflow">return</span> <a class="code" href="class_robot_war_1_1_m_v_c_1_1_fire_event.html#12cf7ad298a2e01be3bde9281b3b7389" title="Указатель на уничтоженного робота.">m_KilledRobot</a>!=NULL;}
+<a name="l00078"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_fire_event.html#cf30049d0ffe809d40dec9884579539c">00078</a>                         <a class="code" href="class_robot_war_1_1_m_v_c_1_1_fire_event.html#cf30049d0ffe809d40dec9884579539c">FireEvent</a>(<a class="code" href="class_robot_war_1_1_robot_internal.html">RobotInternal</a> *Sender,<a class="code" href="class_robot_war_1_1_robot_internal.html">RobotInternal</a> *KilledRobot=NULL) 
+<a name="l00079"></a>00079                                 : <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html">Event</a>(Sender),<a class="code" href="class_robot_war_1_1_m_v_c_1_1_fire_event.html#12cf7ad298a2e01be3bde9281b3b7389" title="Указатель на уничтоженного робота.">m_KilledRobot</a>(KilledRobot) {}
+<a name="l00080"></a>00080                 };
+<a name="l00081"></a>00081 
+<a name="l00085"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_new_robot_event.html">00085</a>                 <span class="keyword">class </span><a class="code" href="class_robot_war_1_1_m_v_c_1_1_new_robot_event.html">NewRobotEvent</a>: <span class="keyword">public</span> <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html">Event</a>
+<a name="l00086"></a>00086                 {
+<a name="l00087"></a>00087                 <span class="keyword">public</span>:
+<a name="l00090"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_new_robot_event.html#7ed1a12eab4f8a129528989f905406c0">00090</a>                         <a class="code" href="class_robot_war_1_1_m_v_c_1_1_new_robot_event.html#7ed1a12eab4f8a129528989f905406c0">NewRobotEvent</a>(<a class="code" href="class_robot_war_1_1_robot_internal.html">RobotInternal</a> *Sender) : <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event.html">Event</a>(Sender) {}
+<a name="l00091"></a>00091                 };
+<a name="l00092"></a>00092 
+<a name="l00096"></a>00096                 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> EARG&gt;
+<a name="l00097"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html">00097</a>                 <span class="keyword">class </span><a class="code" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html">EventDelegate</a> :
+<a name="l00098"></a>00098                         <span class="keyword">public</span> RobotWar::MVC::<a class="code" href="class_robot_war_1_1_m_v_c_1_1_i_subject.html">ISubject</a>&lt;EARG&gt;
+<a name="l00099"></a>00099                 {
+<a name="l00100"></a>00100                 <span class="keyword">public</span>:
+<a name="l00101"></a>00101                         
+<a name="l00102"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html#ae99846ed63c22e2786564fe88fc121f">00102</a>                         <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html#ae99846ed63c22e2786564fe88fc121f">~EventDelegate</a>(<span class="keywordtype">void</span>){<a class="code" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html#8b96d5d889dac8edab2dd8d7d6017dad" title="Список наблюдателей, получающих рассылку события...">m_ObserversStorage</a>.clear();}
+<a name="l00105"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html#8611966ce87e02dbee8b3f6bf3c2ff17">00105</a>                         <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html#8611966ce87e02dbee8b3f6bf3c2ff17">Attach</a>(<a class="code" href="class_robot_war_1_1_m_v_c_1_1_i_observer.html">IObserver&lt;EARG&gt;</a> *observer) {<a class="code" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html#8b96d5d889dac8edab2dd8d7d6017dad" title="Список наблюдателей, получающих рассылку события...">m_ObserversStorage</a>.push_back(observer);}
+<a name="l00108"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html#4a3069fff91e64b92702dc2ba566146b">00108</a>                         <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html#4a3069fff91e64b92702dc2ba566146b">Detach</a>(<a class="code" href="class_robot_war_1_1_m_v_c_1_1_i_observer.html">IObserver&lt;EARG&gt;</a> *observer) {<a class="code" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html#8b96d5d889dac8edab2dd8d7d6017dad" title="Список наблюдателей, получающих рассылку события...">m_ObserversStorage</a>.remove(observer);}
+<a name="l00111"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html#3b7e4799bc16465be8c523e39d108159">00111</a>                         <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html#3b7e4799bc16465be8c523e39d108159">Notify</a>(EARG &amp;Sender)
+<a name="l00112"></a>00112                         {
+<a name="l00113"></a>00113                                 <span class="keywordflow">for</span>(list&lt;<a class="code" href="class_robot_war_1_1_m_v_c_1_1_i_observer.html">IObserver&lt;EARG&gt;</a>*&gt;::iterator i = <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html#8b96d5d889dac8edab2dd8d7d6017dad" title="Список наблюдателей, получающих рассылку события...">m_ObserversStorage</a>.begin();
+<a name="l00114"></a>00114                                         i != <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html#8b96d5d889dac8edab2dd8d7d6017dad" title="Список наблюдателей, получающих рассылку события...">m_ObserversStorage</a>.end();
+<a name="l00115"></a>00115                                         i++)
+<a name="l00116"></a>00116                                         (*i)-&gt;Update(Sender);
+<a name="l00117"></a>00117                                         ;
+<a name="l00118"></a>00118                         }
+<a name="l00119"></a>00119 
+<a name="l00120"></a>00120                 <span class="keyword">private</span>:
+<a name="l00122"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html#8b96d5d889dac8edab2dd8d7d6017dad">00122</a>                         list&lt;IObserver&lt;EARG&gt;*&gt; <a class="code" href="class_robot_war_1_1_m_v_c_1_1_event_delegate.html#8b96d5d889dac8edab2dd8d7d6017dad" title="Список наблюдателей, получающих рассылку события...">m_ObserversStorage</a>;
+<a name="l00123"></a>00123                 };
+<a name="l00124"></a>00124         }
+<a name="l00125"></a>00125 }
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Документация по RobotWar. Последние изменения: Fri Jan 9 13:33:54 2009. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
+</body>
+</html>

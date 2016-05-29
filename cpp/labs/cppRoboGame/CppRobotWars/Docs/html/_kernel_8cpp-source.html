@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>RobotWar: Исходный файл D:/Development/SoftEngineering/Pavlin-Co/cppRoboGame/CppRobotWars/CppRobotWars/Kernel.cpp</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.5.7.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&nbsp;имен</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&nbsp;членов&nbsp;всех&nbsp;файлов</span></a></li>
+    </ul>
+  </div>
+<h1>D:/Development/SoftEngineering/Pavlin-Co/cppRoboGame/CppRobotWars/CppRobotWars/Kernel.cpp</h1><a href="_kernel_8cpp.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include "<a class="code" href="_kernel_8h.html">Kernel.h</a>"</span>
+<a name="l00002"></a>00002 <span class="preprocessor">#include "<a class="code" href="_talk_thread_8h.html">TalkThread.h</a>"</span>
+<a name="l00003"></a>00003 
+<a name="l00004"></a>00004 <span class="keyword">using namespace </span>RobotWar::Kernel;
+<a name="l00005"></a>00005 
+<a name="l00006"></a>00006 <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html">Kernel</a> *Kernel::m_Kernel = NULL;
+<a name="l00007"></a>00007 
+<a name="l00008"></a><a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#f5ed5aa776085d809e1850b25cec86cf">00008</a> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html">Kernel::Kernel</a>(<span class="keywordtype">void</span>)
+<a name="l00009"></a>00009 {
+<a name="l00010"></a>00010  srand(1000);
+<a name="l00011"></a>00011 }
+<a name="l00012"></a>00012 
+<a name="l00013"></a><a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#e082d6d9ad28614d8b872d503da2eb5b">00013</a> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#e082d6d9ad28614d8b872d503da2eb5b">Kernel::~Kernel</a>(<span class="keywordtype">void</span>)
+<a name="l00014"></a>00014 {
+<a name="l00015"></a>00015         <span class="keywordflow">for</span>(vector&lt;TalkThread*&gt;::iterator i = <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#3df5ff06ec59217ef7949c93a01076e2" title="список асинхронных сообщений, передаваемых...">m_TalkThreadStorage</a>.begin();
+<a name="l00016"></a>00016                 i != <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#3df5ff06ec59217ef7949c93a01076e2" title="список асинхронных сообщений, передаваемых...">m_TalkThreadStorage</a>.end(); i++)
+<a name="l00017"></a>00017                 <span class="keyword">delete</span> *i;
+<a name="l00018"></a>00018 }
+<a name="l00019"></a>00019 
+<a name="l00020"></a><a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#4edd19769909e8e435f454ca37371d93">00020</a> <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#4edd19769909e8e435f454ca37371d93">RobotWar::Kernel::Kernel::Move</a>(<a class="code" href="class_robot_war_1_1_i_robot.html">IRobot</a> *Sender,<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y)
+<a name="l00021"></a>00021 {
+<a name="l00022"></a>00022         <span class="comment">//проверяем допустимые параметры для перемещения</span>
+<a name="l00023"></a>00023         <span class="keywordflow">if</span>( x &lt; -3 || x &gt; 3 || y &lt;-3 || y &gt; 3) <span class="keywordflow">throw</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_parameters_contract_error.html">ParametersContractError</a>();
+<a name="l00024"></a>00024     map&lt;IRobot*,RobotInternal*&gt;::iterator       c =  <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#68fdb4c09d31d342520463c75dea4784" title="Роботы, которые учавствуют в игре.">m_GameMembersStorage</a>.find(Sender);
+<a name="l00025"></a>00025     <span class="keywordflow">if</span>(c == <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#68fdb4c09d31d342520463c75dea4784" title="Роботы, которые учавствуют в игре.">m_GameMembersStorage</a>.end())
+<a name="l00026"></a>00026           <span class="keywordflow">throw</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_parameters_contract_error.html">ParametersContractError</a>();
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028         <a class="code" href="class_robot_war_1_1_robot_internal.html">RobotInternal</a> *CurrentRobot = c-&gt;second;
+<a name="l00029"></a>00029         <span class="keywordtype">int</span> NeedX = CurrentRobot-&gt;<a class="code" href="class_robot_war_1_1_robot_internal.html#0772bfadb17056f280060f41ae39c6ad" title="возвращает координату x робота.">getX</a>()+x;
+<a name="l00030"></a>00030     <span class="keywordtype">int</span> NeedY = CurrentRobot-&gt;<a class="code" href="class_robot_war_1_1_robot_internal.html#190921772c8d54f6d5252613d6d90f99" title="возвращает координату y робота.">getY</a>()+y;
+<a name="l00031"></a>00031         
+<a name="l00032"></a>00032         <span class="comment">//проверяем, можем ли мы пойти по указанным координатам</span>
+<a name="l00033"></a>00033         <span class="keywordflow">for</span>( map&lt;IRobot*,RobotInternal*&gt;::iterator i = <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#68fdb4c09d31d342520463c75dea4784" title="Роботы, которые учавствуют в игре.">m_GameMembersStorage</a>.begin();
+<a name="l00034"></a>00034                  i != <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#68fdb4c09d31d342520463c75dea4784" title="Роботы, которые учавствуют в игре.">m_GameMembersStorage</a>.end(); i++)
+<a name="l00035"></a>00035                  <span class="keywordflow">if</span>(i-&gt;first != Sender &amp;&amp; NeedX == i-&gt;second-&gt;getX() &amp;&amp; NeedY == i-&gt;second-&gt;getY())
+<a name="l00036"></a>00036                         <span class="keywordflow">throw</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_no_valid_move.html">NoValidMove</a>();
+<a name="l00037"></a>00037         
+<a name="l00038"></a>00038         <a class="code" href="class_robot_war_1_1_m_v_c_1_1_move_event.html">MoveEvent</a> e(CurrentRobot,CurrentRobot-&gt;<a class="code" href="class_robot_war_1_1_robot_internal.html#0772bfadb17056f280060f41ae39c6ad" title="возвращает координату x робота.">getX</a>(),CurrentRobot-&gt;<a class="code" href="class_robot_war_1_1_robot_internal.html#190921772c8d54f6d5252613d6d90f99" title="возвращает координату y робота.">getY</a>());
+<a name="l00039"></a>00039         CurrentRobot-&gt;<a class="code" href="class_robot_war_1_1_robot_internal.html#587f1bfc7161435e46f7a7f4593e3a2e" title="Установка координаты x робота.">SetX</a>(NeedX);
+<a name="l00040"></a>00040         CurrentRobot-&gt;<a class="code" href="class_robot_war_1_1_robot_internal.html#55a21630db45d3ab2615911c3569d3dc" title="установка координаты y робота.">SetY</a>(NeedY);
+<a name="l00041"></a>00041         Sleep(20);
+<a name="l00042"></a>00042         <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#31b5ea827c9dc34c8e4574b95b71e8e7">OnMove</a>.Notify(e);
+<a name="l00043"></a>00043 }
+<a name="l00044"></a>00044 
+<a name="l00045"></a><a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#c99cd9bfb2514cbc0c26ad7b5a3a3cab">00045</a> <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#c99cd9bfb2514cbc0c26ad7b5a3a3cab">RobotWar::Kernel::Kernel::Fire</a>(<a class="code" href="class_robot_war_1_1_i_robot.html">IRobot</a> *Sender,<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y)
+<a name="l00046"></a>00046 {
+<a name="l00047"></a>00047         <span class="keywordflow">if</span>( x &lt; -3 || x &gt; 3 || y &lt;-3 || y &gt; 3) <span class="keywordflow">throw</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_parameters_contract_error.html">ParametersContractError</a>();
+<a name="l00048"></a>00048     map&lt;IRobot*,RobotInternal*&gt;::iterator       c =  <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#68fdb4c09d31d342520463c75dea4784" title="Роботы, которые учавствуют в игре.">m_GameMembersStorage</a>.find(Sender);
+<a name="l00049"></a>00049     <span class="keywordflow">if</span>(c == <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#68fdb4c09d31d342520463c75dea4784" title="Роботы, которые учавствуют в игре.">m_GameMembersStorage</a>.end())
+<a name="l00050"></a>00050           <span class="keywordflow">throw</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_parameters_contract_error.html">ParametersContractError</a>();
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052         <span class="keywordflow">for</span>( map&lt;IRobot*,RobotInternal*&gt;::iterator i = <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#68fdb4c09d31d342520463c75dea4784" title="Роботы, которые учавствуют в игре.">m_GameMembersStorage</a>.begin();
+<a name="l00053"></a>00053                  i != <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#68fdb4c09d31d342520463c75dea4784" title="Роботы, которые учавствуют в игре.">m_GameMembersStorage</a>.end(); i++)
+<a name="l00054"></a>00054                  <span class="keywordflow">if</span>(x == i-&gt;second-&gt;getX() &amp;&amp; y == i-&gt;second-&gt;getY())
+<a name="l00055"></a>00055                  {
+<a name="l00056"></a>00056                          i-&gt;second-&gt;DecreaseHealth(25);
+<a name="l00057"></a>00057                          <span class="keywordflow">if</span>(i-&gt;second-&gt;getHealt() == 0)
+<a name="l00058"></a>00058                                  i-&gt;second-&gt;Stop();
+<a name="l00059"></a>00059                          <a class="code" href="class_robot_war_1_1_m_v_c_1_1_fire_event.html">FireEvent</a> e(c-&gt;second,i-&gt;second);
+<a name="l00060"></a>00060                          <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#fd7f6498ffca451008979a0c972d5af4">OnFire</a>.Notify(e);
+<a name="l00061"></a>00061                  }
+<a name="l00062"></a>00062                  <span class="keywordflow">else</span>
+<a name="l00063"></a>00063                  {
+<a name="l00064"></a>00064                          <a class="code" href="class_robot_war_1_1_m_v_c_1_1_fire_event.html">FireEvent</a> e(c-&gt;second);
+<a name="l00065"></a>00065                          <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#fd7f6498ffca451008979a0c972d5af4">OnFire</a>.Notify(e);
+<a name="l00066"></a>00066                  }
+<a name="l00067"></a>00067 }
+<a name="l00068"></a>00068 
+<a name="l00069"></a><a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#b50a935a42314fa574aac7e3e6ae8c4a">00069</a> <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#b50a935a42314fa574aac7e3e6ae8c4a">RobotWar::Kernel::Kernel::LookAround</a>(<a class="code" href="class_robot_war_1_1_i_robot.html">IRobot</a> *Sender,<span class="keywordtype">int</span> depth, <span class="keywordtype">int</span> CountPoints, <a class="code" href="struct_robot_war_1_1_c_o_o_r_d.html">RobotWar::COORD</a>* pPoints)
+<a name="l00070"></a>00070 {
+<a name="l00071"></a>00071         <span class="keywordflow">if</span>(depth &gt; 3 || depth &lt; 0 ) 
+<a name="l00072"></a>00072                 <span class="keywordflow">throw</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_parameters_contract_error.html">ParametersContractError</a>();
+<a name="l00073"></a>00073 }
+<a name="l00074"></a>00074 
+<a name="l00075"></a><a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#b48f5c72174de56c7dd425140c985fca">00075</a> <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#b48f5c72174de56c7dd425140c985fca">RobotWar::Kernel::Kernel::AddRobot</a>(<a class="code" href="class_robot_war_1_1_robot_internal.html">RobotInternal</a>* Robot)
+<a name="l00076"></a>00076 {
+<a name="l00077"></a>00077         <span class="keywordflow">if</span>(!Robot) <span class="keywordflow">throw</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_parameters_contract_error.html">ParametersContractError</a>();
+<a name="l00078"></a>00078         <span class="comment">//запоминаем робота</span>
+<a name="l00079"></a>00079         <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#68fdb4c09d31d342520463c75dea4784" title="Роботы, которые учавствуют в игре.">m_GameMembersStorage</a>[Robot-&gt;<a class="code" href="class_robot_war_1_1_robot_internal.html#a17bcb86e63d3f32e785b56c69dbf1c1" title="Служебный метод. Возвращает интерфейс на объект...">QueryIRobot</a>()] = Robot;
+<a name="l00080"></a>00080 
+<a name="l00081"></a>00081         <span class="comment">//ставим робота в случайные координаты</span>
+<a name="l00082"></a>00082         <span class="keywordtype">int</span> x = (double)rand() / (RAND_MAX + 1) * (400 - 0)
+<a name="l00083"></a>00083             + 0;
+<a name="l00084"></a>00084         <span class="keywordtype">int</span> y = (double)rand() / (RAND_MAX + 1) * (400 - 0)
+<a name="l00085"></a>00085             + 0;
+<a name="l00086"></a>00086         Robot-&gt;<a class="code" href="class_robot_war_1_1_robot_internal.html#587f1bfc7161435e46f7a7f4593e3a2e" title="Установка координаты x робота.">SetX</a>(x);
+<a name="l00087"></a>00087         Robot-&gt;<a class="code" href="class_robot_war_1_1_robot_internal.html#55a21630db45d3ab2615911c3569d3dc" title="установка координаты y робота.">SetY</a>(y);
+<a name="l00088"></a>00088         <a class="code" href="class_robot_war_1_1_m_v_c_1_1_new_robot_event.html">NewRobotEvent</a> e(Robot);
+<a name="l00089"></a>00089         <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#3a716165914ab4d3107c1d3ad5ba0382">OnNewRobot</a>.Notify(e);
+<a name="l00090"></a>00090 }
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092 
+<a name="l00093"></a><a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#dc95ab3a2d60360ba4f69206950951f1">00093</a> <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#dc95ab3a2d60360ba4f69206950951f1" title="Метод выполнения потока ядраа.">RobotWar::Kernel::Kernel::Execute</a>(<span class="keywordtype">void</span>)
+<a name="l00094"></a>00094 {
+<a name="l00095"></a>00095         <span class="keywordflow">while</span>(1) Sleep(20);<span class="comment">//вот здесь по идее, что-то надо делать...</span>
+<a name="l00096"></a>00096 }
+<a name="l00097"></a>00097 
+<a name="l00098"></a><a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#0b3617e9621ee756b333bf35cf8ae9c2">00098</a> <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#0b3617e9621ee756b333bf35cf8ae9c2" title="Запуск потока ядра (Запуск игры).">RobotWar::Kernel::Kernel::Start</a>(<span class="keywordtype">void</span>)
+<a name="l00099"></a>00099 {
+<a name="l00100"></a>00100         <span class="comment">//необходимо запустить всех роботов в хранилище</span>
+<a name="l00101"></a>00101         <span class="keywordflow">for</span>( map&lt;IRobot*,RobotInternal*&gt;::iterator i = <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#68fdb4c09d31d342520463c75dea4784" title="Роботы, которые учавствуют в игре.">m_GameMembersStorage</a>.begin();
+<a name="l00102"></a>00102                  i != <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#68fdb4c09d31d342520463c75dea4784" title="Роботы, которые учавствуют в игре.">m_GameMembersStorage</a>.end(); i++)
+<a name="l00103"></a>00103          i-&gt;second-&gt;Start();
+<a name="l00104"></a>00104                  
+<a name="l00105"></a>00105 }
+<a name="l00106"></a>00106 
+<a name="l00107"></a><a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#70d181c09ede65b8307483dcbb4a6cd5">00107</a> <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#70d181c09ede65b8307483dcbb4a6cd5" title="Останов потока ядра (Останов игры).">RobotWar::Kernel::Kernel::Stop</a>(<span class="keywordtype">void</span>)
+<a name="l00108"></a>00108 {
+<a name="l00109"></a>00109         <span class="comment">//необходимо остановить всех роботов в хранилище</span>
+<a name="l00110"></a>00110         <span class="keywordflow">for</span>( map&lt;IRobot*,RobotInternal*&gt;::iterator i = <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#68fdb4c09d31d342520463c75dea4784" title="Роботы, которые учавствуют в игре.">m_GameMembersStorage</a>.begin();
+<a name="l00111"></a>00111                  i != <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#68fdb4c09d31d342520463c75dea4784" title="Роботы, которые учавствуют в игре.">m_GameMembersStorage</a>.end(); i++)
+<a name="l00112"></a>00112          i-&gt;second-&gt;Stop();
+<a name="l00113"></a>00113 }
+<a name="l00114"></a>00114 
+<a name="l00115"></a><a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#ae470f7cd04de90cc34c2c4493dc8043">00115</a> <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#ae470f7cd04de90cc34c2c4493dc8043" title="Приостановка потока.">RobotWar::Kernel::Kernel::Suspend</a>(<span class="keywordtype">void</span>)
+<a name="l00116"></a>00116 {
+<a name="l00117"></a>00117         <span class="keywordflow">for</span>( map&lt;IRobot*,RobotInternal*&gt;::iterator i = <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#68fdb4c09d31d342520463c75dea4784" title="Роботы, которые учавствуют в игре.">m_GameMembersStorage</a>.begin();
+<a name="l00118"></a>00118                  i != <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#68fdb4c09d31d342520463c75dea4784" title="Роботы, которые учавствуют в игре.">m_GameMembersStorage</a>.end(); i++)
+<a name="l00119"></a>00119                  i-&gt;second-&gt;Suspend();
+<a name="l00120"></a>00120 }
+<a name="l00121"></a>00121 
+<a name="l00122"></a><a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#c02576b0c0466d14498fa0d58e5ada5f">00122</a> <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#c02576b0c0466d14498fa0d58e5ada5f" title="Возобновление потока.">RobotWar::Kernel::Kernel::Resume</a>(<span class="keywordtype">void</span>)
+<a name="l00123"></a>00123 {
+<a name="l00124"></a>00124         <span class="keywordflow">for</span>( map&lt;IRobot*,RobotInternal*&gt;::iterator i = <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#68fdb4c09d31d342520463c75dea4784" title="Роботы, которые учавствуют в игре.">m_GameMembersStorage</a>.begin();
+<a name="l00125"></a>00125                  i != <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#68fdb4c09d31d342520463c75dea4784" title="Роботы, которые учавствуют в игре.">m_GameMembersStorage</a>.end(); i++)
+<a name="l00126"></a>00126                  i-&gt;second-&gt;Resume();
+<a name="l00127"></a>00127 }
+<a name="l00128"></a>00128 
+<a name="l00129"></a><a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#3f4ad46c810a40fd54df437321eb1404">00129</a> <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#3f4ad46c810a40fd54df437321eb1404">RobotWar::Kernel::Kernel::SendMsg</a>(<a class="code" href="class_robot_war_1_1_i_robot.html">IRobot</a> *Sender,<span class="keywordtype">char</span>* RobotName, <span class="keywordtype">void</span> * TalkData)
+<a name="l00130"></a>00130 {
+<a name="l00131"></a>00131         <span class="keywordflow">if</span>(!Sender || !RobotName || !TalkData) <span class="keywordflow">throw</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_parameters_contract_error.html">ParametersContractError</a>();
+<a name="l00132"></a>00132         <span class="keywordflow">for</span>(map&lt;IRobot*,RobotInternal*&gt;::iterator i = <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#68fdb4c09d31d342520463c75dea4784" title="Роботы, которые учавствуют в игре.">m_GameMembersStorage</a>.begin();
+<a name="l00133"></a>00133                 i != <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#68fdb4c09d31d342520463c75dea4784" title="Роботы, которые учавствуют в игре.">m_GameMembersStorage</a>.end(); i++)
+<a name="l00134"></a>00134                 <span class="keywordflow">if</span>(strcmp(RobotName,i-&gt;first-&gt;getName()) == 0)
+<a name="l00135"></a>00135                 {
+<a name="l00136"></a>00136           <a class="code" href="class_robot_war_1_1_kernel_1_1_talk_thread.html">TalkThread</a> *thread = <span class="keyword">new</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_talk_thread.html">TalkThread</a>(i-&gt;first,RobotName,TalkData);
+<a name="l00137"></a>00137                   <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#3df5ff06ec59217ef7949c93a01076e2" title="список асинхронных сообщений, передаваемых...">m_TalkThreadStorage</a>.push_back(thread);
+<a name="l00138"></a>00138                   thread-&gt;<a class="code" href="class_robot_war_1_1_infrastructure_1_1_thread.html#2b42f82341afd2747ea093b6ac8b91cb" title="запуск потока.">Start</a>();
+<a name="l00139"></a>00139                 }
+<a name="l00140"></a>00140 }
+<a name="l00141"></a>00141 
+<a name="l00142"></a><a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#48dba890afb589b2a954fb681bf64908">00142</a> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html">Kernel</a>* <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#48dba890afb589b2a954fb681bf64908">RobotWar::Kernel::Kernel::CreateKernel</a>(<span class="keywordtype">void</span>)
+<a name="l00143"></a>00143 {
+<a name="l00144"></a>00144         <span class="keywordflow">if</span>(!<a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#b2f9aa2a412fb44c69af07abf06eb233" title="указатель на ядро. Используется в паттерне Singleton...">m_Kernel</a>)
+<a name="l00145"></a>00145          <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#b2f9aa2a412fb44c69af07abf06eb233" title="указатель на ядро. Используется в паттерне Singleton...">m_Kernel</a> = <span class="keyword">new</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html">Kernel</a>;
+<a name="l00146"></a>00146         <span class="keywordflow">return</span> <a class="code" href="class_robot_war_1_1_kernel_1_1_kernel.html#b2f9aa2a412fb44c69af07abf06eb233" title="указатель на ядро. Используется в паттерне Singleton...">m_Kernel</a>;
+<a name="l00147"></a>00147 }
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Документация по RobotWar. Последние изменения: Fri Jan 9 13:33:54 2009. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
+</body>
+</html>

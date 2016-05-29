@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>RobotWar: Исходный файл D:/Development/SoftEngineering/Pavlin-Co/cppRoboGame/CppRobotWars/CppRobotWars/IMvc.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Создано системой Doxygen 1.5.7.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Титульная&nbsp;страница</span></a></li>
+      <li><a href="namespaces.html"><span>Пространства&nbsp;имен</span></a></li>
+      <li><a href="annotated.html"><span>Классы</span></a></li>
+      <li class="current"><a href="files.html"><span>Файлы</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Файлы</span></a></li>
+      <li><a href="globals.html"><span>Список&nbsp;членов&nbsp;всех&nbsp;файлов</span></a></li>
+    </ul>
+  </div>
+<h1>D:/Development/SoftEngineering/Pavlin-Co/cppRoboGame/CppRobotWars/CppRobotWars/IMvc.h</h1><a href="_i_mvc_8h.html">См. документацию.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#pragma once</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span>
+<a name="l00003"></a>00003 <span class="keyword">namespace </span>RobotWar
+<a name="l00004"></a>00004 {
+<a name="l00005"></a>00005         <span class="keyword">namespace </span>MVC
+<a name="l00006"></a>00006         {       
+<a name="l00010"></a>00010                 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> EARG&gt;
+<a name="l00011"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_i_observer.html">00011</a>                 <span class="keyword">class </span><a class="code" href="class_robot_war_1_1_m_v_c_1_1_i_observer.html">IObserver</a>
+<a name="l00012"></a>00012                 {
+<a name="l00013"></a>00013                 <span class="keyword">public</span>:
+<a name="l00015"></a>00015                  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_m_v_c_1_1_i_observer.html#bb635f6be78ebaefa767e960a375f631" title="Метод обработки события. Вызывается при рассылки...">Update</a>(EARG &amp; Sender)=0;
+<a name="l00016"></a>00016                 };
+<a name="l00020"></a>00020                 <span class="keyword">template</span> &lt;<span class="keyword">typename</span> EARG&gt;
+<a name="l00021"></a><a class="code" href="class_robot_war_1_1_m_v_c_1_1_i_subject.html">00021</a>                 <span class="keyword">class </span><a class="code" href="class_robot_war_1_1_m_v_c_1_1_i_subject.html">ISubject</a>
+<a name="l00022"></a>00022                 {
+<a name="l00023"></a>00023                 <span class="keyword">public</span>:
+<a name="l00026"></a>00026                  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_m_v_c_1_1_i_subject.html#c78a3e09721301db8c1a56dc394aae56">Attach</a>(<a class="code" href="class_robot_war_1_1_m_v_c_1_1_i_observer.html">IObserver&lt;EARG&gt;</a> *observer)=0;
+<a name="l00029"></a>00029                  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_m_v_c_1_1_i_subject.html#53bfc0b84ba0b798e0ef35a9b1a3456e">Detach</a>(<a class="code" href="class_robot_war_1_1_m_v_c_1_1_i_observer.html">IObserver&lt;EARG&gt;</a> *observer)=0;
+<a name="l00032"></a>00032                  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_robot_war_1_1_m_v_c_1_1_i_subject.html#a522980555d2156beb3375767010e31c">Notify</a>(EARG &amp; Sender)=0;
+<a name="l00033"></a>00033                 };
+<a name="l00034"></a>00034                 
+<a name="l00035"></a>00035         }
+<a name="l00036"></a>00036 }
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Документация по RobotWar. Последние изменения: Fri Jan 9 13:33:54 2009. Создано системой&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.7.1 </small></address>
+</body>
+</html>
