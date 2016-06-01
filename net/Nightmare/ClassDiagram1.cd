@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Nightmare.Area" Collapsed="true">
+    <Position X="3.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAgBAAAAAAAAAAAAAQAAAAAAAABEAAAAAACAAA=</HashCode>
+      <FileName>Area.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.Beast" Collapsed="true">
+    <Position X="5.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAIAAAAAAAQAAIAIAAQSAIAAIAABAAAAAgABAAA=</HashCode>
+      <FileName>Beast.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.Bee" Collapsed="true">
+    <Position X="3.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIIAAAAAgAAAAAAEAwAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Bee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.Character" Collapsed="true">
+    <Position X="5.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAIAAAgGAAAAAAAAAAAAAIAAAAAhAAAAAQAAAAA=</HashCode>
+      <FileName>Character.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.Dragon" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIIAAAAAgAAAAAAEAwAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Dragon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.Eagle" Collapsed="true">
+    <Position X="14" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIIAAAAAgAAAAAAEAwAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Eagle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.Enemy" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAIIAAAAAgAAAQAAMAxAAQAAAAAAAARAAAAAgABAAA=</HashCode>
+      <FileName>Enemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.ExpierenceService" Collapsed="true">
+    <Position X="19.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAEAAAAAAICAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExpierenceService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.Flying" Collapsed="true">
+    <Position X="6" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Flying.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.Lion" Collapsed="true">
+    <Position X="10" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIIAAAAAgAAAAAAEAwAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Flying.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.Form1" Collapsed="true">
+    <Position X="21.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>5zQbAQCRAzAAABKIBBGAAYhGIAAAQEAJkCBAQAEESFg=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.Game" Collapsed="true">
+    <Position X="23.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIEAAAAAECAAABAAAAAAAQQgAAAAAACAA=</HashCode>
+      <FileName>Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.Item" Collapsed="true">
+    <Position X="8.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.LifePoiton" Collapsed="true">
+    <Position X="10.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LifePoiton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.LoginForm" Collapsed="true">
+    <Position X="19.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAKAAABAAAACAAAACIAAIAAAAEEAAAAAgAQA=</HashCode>
+      <FileName>LoginForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.NewGame" Collapsed="true">
+    <Position X="21.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BQAAAACAQCAgABBQIACAAAACMCIYAAAAAEEIAAAAgAA=</HashCode>
+      <FileName>NewGame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.Player" Collapsed="true">
+    <Position X="3.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABEAAAAAAAAAAAQBAAIAAAAQAIAAAAAAIAAAAAABAEA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.Program" Collapsed="true">
+    <Position X="23.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.Shield" Collapsed="true">
+    <Position X="12.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Shield.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.StaminaPoiton" Collapsed="true">
+    <Position X="3.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StaminaPoiton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.Users" Collapsed="true">
+    <Position X="3.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAQAAAAAAA=</HashCode>
+      <FileName>Users.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.Weapon" Collapsed="true">
+    <Position X="8.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACAAAAAAAAAAQAAAAQAAAAIKIAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.WeaponGenerator" Collapsed="true">
+    <Position X="19.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>WeaponGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.WeaponSelector" Collapsed="true">
+    <Position X="21.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>WeaponSelector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.Wear" Collapsed="true">
+    <Position X="6" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACAAAAAAAAAAAAAAAQAAAAAIAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Wear.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nightmare.Wolf" Collapsed="true">
+    <Position X="17.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIIAAAAAgAAAAAAEAwAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Wolf.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Nightmare.Attack" Collapsed="true">
+    <Position X="3.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAgAAAAA=</HashCode>
+      <FileName>Beast.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="Nightmare.AreaType" Collapsed="true">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgIAAAIAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AreaType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
