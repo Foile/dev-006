@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CodeField2Strategy.Employee">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAACAABAAAAAAEAACAAAAQAAAAEAQAAAAAAAAAAA=</HashCode>
+      <FileName>Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodeField2Strategy.EmployeeType" Collapsed="true">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAACAAAAAAAAAEAACAAAAQAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>EmployeeType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodeField2Strategy.Manager" Collapsed="true">
+    <Position X="2.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Manager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodeField2Strategy.SalesMan" Collapsed="true">
+    <Position X="4" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SalesMan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CodeField2Strategy.Engineer" Collapsed="true">
+    <Position X="5.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engineer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
