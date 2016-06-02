@@ -10,10 +10,12 @@ namespace If2Polymorph
     {
         static void Main(string[] args)
         {
-            Employee Ivan = new Employee() { Workhours = 5};
+            Employee Ivan = new Engineer() { Workhours = 5};
+            Employee Stepan = new SalesMan() {Workhours = 5};
+            Employee IvanIvanovich = new Director() {Workhours = 5};
             Console.WriteLine(Ivan.GetBonus(1));
-            Console.WriteLine(Ivan.GetBonus(2));
-            Console.WriteLine(Ivan.GetBonus(3));
+            Console.WriteLine(Stepan.GetBonus(2));
+            Console.WriteLine(IvanIvanovich.GetBonus(3));
         }
     }
 }

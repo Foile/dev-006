@@ -6,26 +6,18 @@ using System.Threading.Tasks;
 
 namespace If2Polymorph
 {
-    class Employee
+    abstract class Employee
     {
-        public int Workhours {get;set;}
-       public int GetBonus(int yearOfJob)
+       protected const int DIFFICULT_JOB = 10;
+       protected const int DANGEROUS_JOB = 2;
+       protected const int TIME_FOR_OFFICE = 2;
+       protected const int KNOWLEDGE_LEVEL = 5;
+       public int Workhours {get;set;}
+       abstract public int GetBonus(int yearOfJob);
+       protected int ExtraBonus(int yearOfJob, int result)
         {
-            int result=0;
-            switch(typeOfEmployee)
-            {
-                case 1:
-                     result = Workhours * 10;
-                     break;
-                case 2:
-                     result = Workhours * 5 + 2;
-                     break;
-                case 3:
-                     result = Workhours * 10 / 2;
-                     break;                     
-            }
-           result += Workhours*2 * typeOfEmployee;
-           return result;
+            result += Workhours * TIME_FOR_OFFICE * yearOfJob;
+            return result;
         }
     }
 }
