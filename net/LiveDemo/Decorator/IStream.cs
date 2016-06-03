@@ -7,6 +7,6 @@ namespace Decorator
 {
     interface IStream
     {
-        String GetBuffer(String aBuffer);
+        String GetBuffer();
     }
 }

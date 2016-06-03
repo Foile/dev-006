@@ -5,19 +5,16 @@ using System.Text;
 
 namespace Decorator
 {
-    class Compressor : IStream
+    class Compressor : StreamDecorator
     {
-        private IStream stream;
-
-
-        public Compressor(IStream aStream)
+         public Compressor(IStream aStream) : base(aStream)
         {
-            stream = aStream;
+            
         }
 
-        public String GetBuffer(string aBuffer)
+        public override String GetBuffer()
         {           
-            return  "**" +stream.GetBuffer(aBuffer) + "**";
+            return  "**" +base.GetBuffer() + "**";
         }
     }
 }

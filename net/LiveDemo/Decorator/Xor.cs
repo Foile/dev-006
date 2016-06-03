@@ -5,17 +5,15 @@ using System.Text;
 
 namespace Decorator
 {
-    class Xor : IStream
+    class Xor : StreamDecorator
     {
-        private IStream stream;
-
-        public Xor(IStream aStream)
+         public Xor(IStream aStream) : base(aStream)
         {
-            stream = aStream;
+            
         }
-        public string GetBuffer(string aBuffer)
+        override public string GetBuffer()
         {
-            return "^" + stream.GetBuffer(aBuffer);
+            return "^" + base.GetBuffer();
         }
     }
 }

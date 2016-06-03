@@ -5,17 +5,15 @@ using System.Text;
 
 namespace Decorator
 {
-    class Base64 : IStream
+    class Base64 :StreamDecorator
     {
-        private IStream stream;
-
-        public Base64(IStream aStream )
+        public Base64(IStream aStream ) : base(aStream)
         {
-            stream = aStream;
+          
         }
-        public string GetBuffer(string aBuffer)
+        override public string GetBuffer()
         {
-            return "==" + stream.GetBuffer(aBuffer);
+            return "==" + base.GetBuffer();
         }
     }
 }

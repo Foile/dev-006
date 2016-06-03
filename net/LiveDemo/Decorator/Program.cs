@@ -10,14 +10,14 @@ namespace Decorator
         static void Main(string[] args)
         {
            IStream stream = new Compressor
-               (new Xor(new Base64(new MemStream())));
-            Console.WriteLine(stream.GetBuffer("qwerty"));
+               (new Xor(new Base64(new MemStream("qwerty"))));
+            Console.WriteLine(stream.GetBuffer());
             IStream stream2 = new Xor
-              (new Compressor(new Base64(new MemStream())));
-            Console.WriteLine(stream2.GetBuffer("qwerty"));
+              (new Compressor(new Base64(new MemStream("qwerty"))));
+            Console.WriteLine(stream2.GetBuffer());
 
-            IStream base64stream = new Base64(new MemStream());
-            Console.WriteLine(base64stream.GetBuffer("@@@@@@"));
+            IStream base64stream = new Base64(new MemStream("qwerty"));
+            Console.WriteLine(base64stream.GetBuffer());
         }
     }
 }

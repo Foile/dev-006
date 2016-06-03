@@ -7,11 +7,14 @@ namespace Decorator
 {
     class MemStream : IStream
     {
-        
-
-        public String GetBuffer(String aBuffer)
+        private String _Buffer;
+        public MemStream(String Buffer)
         {
-            return aBuffer;
+            _Buffer = Buffer;
+        }
+        virtual public String GetBuffer()
+        {
+            return _Buffer;
         }
     }
 }
