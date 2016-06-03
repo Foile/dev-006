@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using NullObject;
 
-namespace CodeField2Strategy
+namespace CodeField2State
 {
     class Employee
     {

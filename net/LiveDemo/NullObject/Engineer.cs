@@ -1,4 +1,4 @@
-﻿using CodeField2Strategy;
+﻿using CodeField2State;
 
 namespace NullObject
 {

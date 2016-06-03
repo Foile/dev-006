@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using CodeField2Strategy;
+using CodeField2State;
 
 namespace NullObject
 {
