@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppRobotWars", "CppRobotWars\CppRobotWars.vcxproj", "{EF186B7D-00BA-4821-B97D-51A59116A792}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RabbitRobot", "RabbitRobot\RabbitRobot.vcxproj", "{C54D45F7-929B-4B24-9652-B27493B83F72}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTest", "UnitTest\UnitTest.vcxproj", "{D7B311F2-7F96-4051-9A6F-108BB9993524}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExperimentalMouse", "ExperimentalMouse\ExperimentalMouse.vcxproj", "{49776BE4-70EA-46D8-9301-6769DDCD29F5}"
 EndProject
@@ -25,10 +25,6 @@ Global
 		{C54D45F7-929B-4B24-9652-B27493B83F72}.Debug|Win32.Build.0 = Debug|Win32
 		{C54D45F7-929B-4B24-9652-B27493B83F72}.Release|Win32.ActiveCfg = Release|Win32
 		{C54D45F7-929B-4B24-9652-B27493B83F72}.Release|Win32.Build.0 = Release|Win32
-		{D7B311F2-7F96-4051-9A6F-108BB9993524}.Debug|Win32.ActiveCfg = Debug|Win32
-		{D7B311F2-7F96-4051-9A6F-108BB9993524}.Debug|Win32.Build.0 = Debug|Win32
-		{D7B311F2-7F96-4051-9A6F-108BB9993524}.Release|Win32.ActiveCfg = Release|Win32
-		{D7B311F2-7F96-4051-9A6F-108BB9993524}.Release|Win32.Build.0 = Release|Win32
 		{49776BE4-70EA-46D8-9301-6769DDCD29F5}.Debug|Win32.ActiveCfg = Debug|Win32
 		{49776BE4-70EA-46D8-9301-6769DDCD29F5}.Debug|Win32.Build.0 = Debug|Win32
 		{49776BE4-70EA-46D8-9301-6769DDCD29F5}.Release|Win32.ActiveCfg = Release|Win32
