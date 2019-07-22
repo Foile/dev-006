@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdbcInit", "OdbcInit.csproj", "{CE3BEADA-DC75-46D0-894B-D0F21E414BDE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE3BEADA-DC75-46D0-894B-D0F21E414BDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE3BEADA-DC75-46D0-894B-D0F21E414BDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE3BEADA-DC75-46D0-894B-D0F21E414BDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE3BEADA-DC75-46D0-894B-D0F21E414BDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7A1C3BA-FEC3-4B14-A385-FB0EE5B1E177}
+	EndGlobalSection
+EndGlobal
