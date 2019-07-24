@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Area.cs" />
     <Compile Include="AreaType.cs" />
+    <Compile Include="Bag.cs" />
     <Compile Include="Beast.cs" />
     <Compile Include="Bee.cs" />
     <Compile Include="Character.cs" />
@@ -78,7 +79,9 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Game.cs" />
+    <Compile Include="IEquip.cs" />
     <Compile Include="Item.cs" />
+    <Compile Include="Lion.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,11 +96,18 @@
     </Compile>
     <Compile Include="Player.cs" />
     <Compile Include="LifePoiton.cs" />
+    <Compile Include="Profession.cs" />
+    <Compile Include="Stats.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shield.cs" />
     <Compile Include="StaminaPoiton.cs" />
     <Compile Include="Users.cs" />
+    <Compile Include="Barbarian.cs" />
+    <Compile Include="Rouge.cs" />
+    <Compile Include="Wizard.cs" />
+    <Compile Include="Paladin.cs" />
+    <Compile Include="Warrior.cs" />
     <Compile Include="Weapon.cs" />
     <Compile Include="WeaponSelector.cs" />
     <Compile Include="WeaponGenerator.cs" />

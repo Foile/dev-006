@@ -17,47 +17,12 @@
         }
 
         public bool CanWearFor(Player player) {
-            switch (player.Class) {
-                case "Warrior":
-                    Equiped = true;
-                    return true;
-                    break;
-                case "Paladin":
-                    if (Mace || Sword || Dagger || Bow) {
-                        Equiped = true;
-                        return true;
-                    }
-                    else {
-                        return false;
-                    }
-
-                    break;
-                case "Wizard":
-                    if (!Staff) {
-                        return false;
-                    }
-                    else {
-                        Equiped = true;
-                        return true;
-                    }
-                    break;
-                case "Rouge":
-                    if (Dagger || Bow) {
-                        Equiped = true;
-
-                        return true;
-                    }
-                    else {
-                        return false;
-                    }
-                    break;
-                case "Barbarian":
-                    Equiped = true;
-
-                    return true;
-                    break;
+            if (!player.Class.CanWear(this))
+            {
+                return false;
             }
 
+            Equiped = true;
             return true;
         }
     }

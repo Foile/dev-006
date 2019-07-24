@@ -10,13 +10,13 @@ namespace Nightmare {
 
         public List<int> Dices(Player player) {
             var rolls = 2;
-            if (player.Stats[6] > 5) {
+            if (player.Stats.Luck > 5) {
                 rolls += 1;
             }
-            if (player.Stats[6] > 15 && player.Stats[1] > 10) {
+            if (player.Stats.Luck > 15 && player.Stats.Perception > 10) {
                 rolls += 2;
             }
-            if (player.Stats[6] > 25 && player.Stats[4] > 20) {
+            if (player.Stats.Luck > 25 && player.Stats.Intelligence > 20) {
                 rolls += 3;
             }
 
@@ -32,8 +32,8 @@ namespace Nightmare {
 
         public void LevelUp(Character character, Form1 form1) {
             character.Player.LevelPoints = 5;
-            character.Player.Life = character.Player.Life + character.Player.Life*(int) character.Player.life[character.Player.Class][0];
-            character.Player.Stamina = character.Player.Stamina + character.Player.Life*(int) character.Player.life[character.Player.Class][1];
+            character.Player.Life = character.Player.Life + character.Player.Life * (int)character.Player.Class.HpModificator;
+            character.Player.Stamina = character.Player.Stamina + character.Player.Life * (int)character.Player.Class.SpModificator;
 
             form1.NewLevel();
         }
@@ -43,9 +43,13 @@ namespace Nightmare {
             beastAttack = beast.Attack();
         }
 
+        private bool CharStrengherThanBeast(Character character, Beast beast) {
+            return (character.Level > beast.Level) && (charAttack.Count >= beastAttack.Count);
+        }
+
         public void Turn(Character character, Beast beast, List<int> charDices, List<int> beastDices) {
-            if (character.Level > beast.Level) {
-                if (charAttack.Count >= beastAttack.Count) {
+
+            if (CharStrengherThanBeast(character, beast)) {
                     for (var i = 0; i < charAttack.Count; i++) {
                         if (charAttack[i].Power > beastAttack[i].Defence) {
                             if (charDices.Count(j => j == 6) >= 1) {
@@ -75,8 +79,8 @@ namespace Nightmare {
                             }
                         }
                     }
-                }
             }
+            
 
             if (beast.Life <= 0) {
                 new ExpierenceService().AddXp(character, beast);

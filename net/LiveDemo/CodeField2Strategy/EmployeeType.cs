@@ -10,7 +10,7 @@ namespace CodeField2Strategy
         public static readonly EmployeeType ENGINEER = new EmployeeType(1,0);
         public static readonly EmployeeType SALESMAN = new EmployeeType(0,0);
         public static readonly EmployeeType MANAGER = new EmployeeType(2,0);
-         public static readonly EmployeeType DIRECTOR = new EmployeeType(3,0);
+        public static readonly EmployeeType DIRECTOR = new EmployeeType(3,0);
 
         public int WorkHours { get; private set; }
 

@@ -38,9 +38,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(174, 120);
+            this.button1.Location = new System.Drawing.Point(271, 194);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 41);
+            this.button1.Size = new System.Drawing.Size(189, 63);
             this.button1.TabIndex = 0;
             this.button1.Text = "Confirm";
             this.button1.UseVisualStyleBackColor = true;
@@ -49,54 +50,60 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(85, 50);
+            this.label1.Location = new System.Drawing.Point(128, 77);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.Size = new System.Drawing.Size(48, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Login";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(143, 47);
+            this.textBox1.Location = new System.Drawing.Point(214, 72);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(198, 20);
+            this.textBox1.Size = new System.Drawing.Size(295, 26);
             this.textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(143, 73);
+            this.textBox2.Location = new System.Drawing.Point(214, 112);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(198, 20);
+            this.textBox2.Size = new System.Drawing.Size(295, 26);
             this.textBox2.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(85, 76);
+            this.label2.Location = new System.Drawing.Point(128, 117);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(78, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(85, 178);
+            this.label3.Location = new System.Drawing.Point(128, 274);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.Size = new System.Drawing.Size(0, 20);
             this.label3.TabIndex = 5;
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(456, 217);
+            this.ClientSize = new System.Drawing.Size(684, 334);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginForm_FormClosing);

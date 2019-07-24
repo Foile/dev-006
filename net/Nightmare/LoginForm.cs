@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Data.SqlServerCe;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Nightmare {
@@ -14,10 +14,10 @@ namespace Nightmare {
         }
 
         private void button1_Click(object sender, EventArgs e) {
-            var con = new SqlCeConnection("DataSource=|DataDirectory|\\Database.sdf");
-            var sqlCommand = new SqlCeCommand("select * from users", con);
+            var con = new SqlConnection("DataSource=|DataDirectory|\\Database.sdf");
+            var sqlCommand = new SqlCommand("select * from users", con);
             con.Open();
-            var set = sqlCommand.ExecuteResultSet(ResultSetOptions.None);
+            var set = sqlCommand.ExecuteReader();
 
 
             while (set.Read()) {

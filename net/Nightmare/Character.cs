@@ -45,7 +45,7 @@ namespace Nightmare {
                 }
                 if (item.Type == "Wr") {
                     var wear = ((Wear) item);
-                    if (wear.Equiped == false) {
+                    if (!wear.Equiped == false) {
                         wears.Add(wear);
                     }
                 }
@@ -65,8 +65,7 @@ namespace Nightmare {
         }
 
         public void Equip(Weapon weapon) {
-            var result = weapon.CanWearFor(Player);
-            if (result) {
+            if (Player.Class.CanWear(weapon)) {
                 weapon.Equiped = true;
             }
         }
@@ -88,8 +87,7 @@ namespace Nightmare {
         }
 
         public void Equip(Shield shield) {
-            var result = shield.CanWearFor(Player);
-            if (result) {
+            if (Player.Class.CanWear(shield)) {
                 shield.Equiped = true;
             }
         }

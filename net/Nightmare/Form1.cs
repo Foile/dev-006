@@ -24,15 +24,15 @@ namespace Nightmare {
                 character = new Character();
                 character.Player = MainStatistic;
 
-                textBox1.Text = character.Player.Stats[0].ToString();
-                textBox2.Text = character.Player.Stats[1].ToString();
-                textBox3.Text = character.Player.Stats[2].ToString();
-                textBox4.Text = character.Player.Stats[3].ToString();
-                textBox5.Text = character.Player.Stats[4].ToString();
-                textBox6.Text = character.Player.Stats[5].ToString();
-                textBox7.Text = character.Player.Stats[6].ToString();
+                textBox1.Text = character.Player.Stats.Strength.ToString();
+                textBox2.Text = character.Player.Stats.Perception.ToString();
+                textBox3.Text = character.Player.Stats.Endurance.ToString();
+                textBox4.Text = character.Player.Stats.Charisma.ToString();
+                textBox5.Text = character.Player.Stats.Intelligence.ToString();
+                textBox6.Text = character.Player.Stats.Agility.ToString();
+                textBox7.Text = character.Player.Stats.Luck.ToString();
 
-                PlayerClass.Text = character.Player.Class;
+                PlayerClass.Text = character.Player.Class.ToString();
 
                 game = new Game();
                 game.LevelUp(character, this);
